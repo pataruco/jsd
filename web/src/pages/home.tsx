@@ -7,16 +7,16 @@ import Title from '../components/title';
 import Page from '../components/page';
 
 const Weeks = [
-  'HTML & CSS Basics',
-  'Box Model, CSS Selectors, Specificity & Floats',
-  'Flexbox & Positioning',
-  'Responsive Web development',
-  'Intro to JavaScript & Document Object Model (DOM)',
-  'Conditional statements, arrays & loops',
-  'CSS animations & JavaScript plugins',
-  `Forms & API Requests and Responses`,
-  'Git, Sass, Accessibility and SVG',
-  'UI libraries & Final Presentations',
+  'Installfest, The Command Line & Data Types',
+  // 'Collections,Loops, Conditionals & Functions',
+  // 'Scope, Variables, Objects & JSON',
+  // 'Slackbot Lab & The DOM & jQuery',
+  // 'JavaScript Events, AJAX & APIs',
+  // 'Asynchronous JavaScript, Callbacks & Advanced APIs',
+  // 'APIs Lab & Prototypal Inheritance',
+  // 'Closures, this & Intro to CRUD and Firebase Lab',
+  // 'Deploying Your App & Student Choice',
+  // 'Final Project Lab & Final Project Presentations ',
 ];
 
 const StyledMain = styled.main`

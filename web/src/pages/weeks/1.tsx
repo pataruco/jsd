@@ -56,11 +56,11 @@ const bonuses = [
 
 const weekConfig = {
   weekNumber: 1,
-  resources: resources,
-  bonuses: bonuses,
-  firstLessonTitle: 'Orientation and introduction to HTML',
-  secondLessonTitle: 'Advanced HTML & Intro to CSS',
-  homeworkPath: '/week-1/lesson-2#43',
+  // resources: resources,
+  // bonuses: bonuses,
+  firstLessonTitle: 'Installfest',
+  secondLessonTitle: 'The Command Line & Data Types',
+  // homeworkPath: '/week-1/lesson-2#43',
 };
 
 const Week1 = () => <Week {...weekConfig} />;
