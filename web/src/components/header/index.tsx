@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   closeBonusLessonMenu,
   closeWeekMenu,
-  openBonusLessonMenu,
+  // openBonusLessonMenu,
   openWeekMenu,
   selectNavigationMenu,
   openMobileMenu,
@@ -136,30 +136,30 @@ export const bonusLessons = [
   ['JavaScript history', '/bonus-lessons/javascript-history'],
 ];
 
-const BonusLessons: React.FC = () => {
-  const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
-  const dispatch = useDispatch();
+// const BonusLessons: React.FC = () => {
+//   const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
+//   const dispatch = useDispatch();
 
-  const close = (event: React.MouseEvent) => {
-    dispatch(closeWeekMenu());
-    dispatch(closeBonusLessonMenu());
-  };
+//   const close = (event: React.MouseEvent) => {
+//     dispatch(closeWeekMenu());
+//     dispatch(closeBonusLessonMenu());
+//   };
 
-  return (
-    <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {bonusLessons.map((lesson, i) => {
-        const [name, path] = lesson;
-        return (
-          <li key={i}>
-            <Link to={path} key={i}>
-              <span onClick={close}>{name}</span>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
+//   return (
+//     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+//       {bonusLessons.map((lesson, i) => {
+//         const [name, path] = lesson;
+//         return (
+//           <li key={i}>
+//             <Link to={path} key={i}>
+//               <span onClick={close}>{name}</span>
+//             </Link>
+//           </li>
+//         );
+//       })}
+//     </ul>
+//   );
+// };
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
@@ -178,10 +178,10 @@ const Header: React.FC = () => {
     dispatch(openWeekMenu());
   };
 
-  const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
-    dispatchClose();
-    dispatch(openBonusLessonMenu());
-  };
+  // const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
+  //   dispatchClose();
+  //   dispatch(openBonusLessonMenu());
+  // };
 
   const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
     dispatch(openMobileMenu());
