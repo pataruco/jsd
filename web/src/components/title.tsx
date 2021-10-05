@@ -14,7 +14,7 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
       component = (
         <Helmet>
           <title>
-            Lesson {`${lesson}`} | Week {`${week}`} | FEWD | GA London
+            Lesson {`${lesson}`} | Week {`${week}`} | JSD | GA London
           </title>
         </Helmet>
       );
@@ -22,14 +22,14 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
     case week && Number.isFinite(week):
       component = (
         <Helmet>
-          <title>Week {`${week}`} | FEWD | GA London</title>
+          <title>Week {`${week}`} | JSD | GA London</title>
         </Helmet>
       );
       break;
     case typeof title === 'string':
       component = (
         <Helmet>
-          <title>{title} | FEWD | GA London</title>
+          <title>{title} | JSD | GA London</title>
         </Helmet>
       );
       break;
@@ -37,7 +37,7 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
     default:
       component = (
         <Helmet>
-          <title>FEWD | GA London</title>
+          <title>JSD | GA London</title>
         </Helmet>
       );
       break;

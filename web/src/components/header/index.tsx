@@ -31,6 +31,10 @@ const StyledHeader = styled.header`
     list-style: none;
   }
 
+  nav {
+    min-width: 25%;
+  }
+
   nav > ul {
     display: flex;
     position: relative;
@@ -99,7 +103,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const weeksIterator = new Array(10).fill('Week');
+export const weeksIterator = new Array(1).fill('Week');
 
 export const Weeks: React.FC = () => {
   const { weekIsOpen } = useSelector(selectNavigationMenu);
@@ -196,7 +200,7 @@ const Header: React.FC = () => {
             <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
             <Weeks />
           </li>
-          <li>
+          {/* <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
               Bonus lessons
             </button>
@@ -207,7 +211,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <button onClick={handleOnOpenMobileMenuClick}>Menu</button>

@@ -32,7 +32,7 @@ const Home: React.FC = () => (
     <Title title="Home" />
     <Header />
     <StyledMain>
-      <h1>Welcome to FEWD London 🇬🇧 </h1>
+      <h1>Welcome to JSD London 🇬🇧 </h1>
       <nav>
         <ul>
           {Weeks.map((week, i) => (
