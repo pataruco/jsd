@@ -54,5 +54,6 @@
     "prestart": "bash ./timestamp.sh",
     "start": "react-scripts start",
     "test": "react-scripts test"
-  }
+  },
+  "private": false
 }
