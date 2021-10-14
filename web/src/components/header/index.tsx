@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   closeBonusLessonMenu,
   closeWeekMenu,
-  // openBonusLessonMenu,
+  openBonusLessonMenu,
   openWeekMenu,
   selectNavigationMenu,
   openMobileMenu,
@@ -131,35 +131,34 @@ export const Weeks: React.FC = () => {
 };
 
 export const bonusLessons = [
-  ['CSS grids', '/bonus-lessons/grids'],
-  ['HTML tables', '/bonus-lessons/tables'],
-  ['JavaScript history', '/bonus-lessons/javascript-history'],
+  ['Installfest macOS', '/bonus-lessons/installfest-macos'],
+  ['Installfest Windows', '/bonus-lessons/installfest-windows'],
 ];
 
-// const BonusLessons: React.FC = () => {
-//   const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
-//   const dispatch = useDispatch();
+const BonusLessons: React.FC = () => {
+  const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
+  const dispatch = useDispatch();
 
-//   const close = (event: React.MouseEvent) => {
-//     dispatch(closeWeekMenu());
-//     dispatch(closeBonusLessonMenu());
-//   };
+  const close = (event: React.MouseEvent) => {
+    dispatch(closeWeekMenu());
+    dispatch(closeBonusLessonMenu());
+  };
 
-//   return (
-//     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-//       {bonusLessons.map((lesson, i) => {
-//         const [name, path] = lesson;
-//         return (
-//           <li key={i}>
-//             <Link to={path} key={i}>
-//               <span onClick={close}>{name}</span>
-//             </Link>
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// };
+  return (
+    <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+      {bonusLessons.map((lesson, i) => {
+        const [name, path] = lesson;
+        return (
+          <li key={i}>
+            <Link to={path} key={i}>
+              <span onClick={close}>{name}</span>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
@@ -178,10 +177,10 @@ const Header: React.FC = () => {
     dispatch(openWeekMenu());
   };
 
-  // const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
-  //   dispatchClose();
-  //   dispatch(openBonusLessonMenu());
-  // };
+  const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
+    dispatchClose();
+    dispatch(openBonusLessonMenu());
+  };
 
   const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
     dispatch(openMobileMenu());
@@ -200,18 +199,18 @@ const Header: React.FC = () => {
             <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
             <Weeks />
           </li>
-          {/* <li>
+          <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
               Bonus lessons
             </button>
             <BonusLessons />
           </li>
-          <li>
+          {/* <li>
             <Link to="/final-project-brief">Final project</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/about">About</Link>
-          </li> */}
+          </li>
         </ul>
       </nav>
       <button onClick={handleOnOpenMobileMenuClick}>Menu</button>
