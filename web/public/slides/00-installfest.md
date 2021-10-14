@@ -179,25 +179,27 @@ In this lesson, you will:
 
 ---
 
-class: center, middle
+## Installfest
+
+Click in either logo to navigate to the corresponding machinge setup
 
 <div class="row">
-   <div>
-      <picture class="image-half">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/MacOS_wordmark_%282017%29.svg" alt="mac logo"/>
-      </picture>
-       <h3 class="align-center">
-        <a href="/bonus-lessons/installfest-macos">Installfest</a>
-      </h3>
-   </div>
-   <div>
-      <picture class="image-half">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Windows_logo_and_wordmark_-_2021.svg" alt="windows logo"/>
-      </picture>
-      <h3 class="align-center">
-        <a href="/bonus-lessons/installfest-windows">Installfest</a>
-      </h3>
-   </div>
+  <a href="/bonus-lessons/installfest-macos">
+    <picture class="image-half">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/2/21/MacOS_wordmark_%282017%29.svg"
+        alt="mac logo"
+      />
+    </picture>
+  </a>
+  <a href="/bonus-lessons/installfest-windows">
+    <picture class="image-half">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Windows_logo_and_wordmark_-_2021.svg"
+        alt="windows logo"
+      />
+    </picture>
+  </a>
 </div>
 
 ---
