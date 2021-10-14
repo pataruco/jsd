@@ -688,3 +688,69 @@ Please, tell us the difference between:
 </div>
 
 ---
+
+## Pseudo code
+
+- A great way to break down a problem into small chunks is to use pseudo code.
+- Pseudo code is usually typed in comments so it has no effect on the program being written.
+- It is typically written in a mixture of natural language and high-level programming constructs.
+- It can make your code very understandable and even simplify debugging.
+
+---
+
+## Comments in JavasScript
+
+To comment out a line hit <kbd>cmd</kbd> + <kbd>/</kbd>
+
+```js
+// Comment on a single line can be created by two forward slashes
+
+// Comments are greyed out by the editor
+
+/* 
+I am a line
+
+Multi line comments are created by using a different syntax 
+
+I am a line
+  
+*/
+```
+
+---
+
+## Pseudo code lab
+
+### Task:
+
+Imagine we have 3 different coloured buttons (red 🔴, blue 🔵 and yellow 🟡). If a user taps a button, the light changes to that colour. If the selected colour is tapped again, the light turns off.
+
+Write the pseudo code for a programme that controls a light that can changed based on user input.
+
+---
+
+## Learning objectives - Review
+
+- Differentiate between the Internet and the World Wide Web.
+- Summarise the client-server model & explain how DNS lookup works.
+- Write pseudocode and explain how it relates to programmatic thinking.
+
+---
+
+## Next session: JavaScript on the command line
+
+At the end of next class, we'll cover:
+
+- Understanding JavaScript in the browser vs. the command line
+- Running JavaScript code on the command line using Node.js
+- Introduction to variables and data types
+
+---
+
+class: frontpage
+
+<div>
+  <h2>JavaScript Development</h2>
+  <hr/>
+  <h1>End of presentation</h1>
+</div>
