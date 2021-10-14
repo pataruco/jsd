@@ -206,197 +206,62 @@ export const weekRoutes = [
       );
     },
   },
-  // {
-  //   path: '/week-2',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/2'));
-  //     return (
-  //       <>
-  //         <Title week={2} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-3',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/3'));
-  //     return (
-  //       <>
-  //         <Title week={3} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-4',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/4'));
-  //     return (
-  //       <>
-  //         <Title week={4} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-5',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/5'));
-  //     return (
-  //       <>
-  //         <Title week={5} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-6',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/6'));
-  //     return (
-  //       <>
-  //         <Title week={6} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-7',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/7'));
-  //     return (
-  //       <>
-  //         <Title week={7} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-8',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/8'));
-  //     return (
-  //       <>
-  //         <Title week={8} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-9',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/9'));
-  //     return (
-  //       <>
-  //         <Title week={9} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
-  // {
-  //   path: '/week-10',
-  //   component: () => {
-  //     const Content = lazy(() => import('../pages/weeks/10'));
-  //     return (
-  //       <>
-  //         <Title week={10} />
-  //         <Suspense fallback={<Loading />}>
-  //           <Content />
-  //         </Suspense>
-  //       </>
-  //     );
-  //   },
-  // },
 ];
 
 // Bonus lessons
 // Path: /bonus-lessons/n
-// export const bonusLessonRoutes = [
-//   {
-//     path: '/bonus-lessons/grids',
-//     component: () => (
-//       <>
-//         <Title title="Bonus Lesson | Grids" />
-//         <SlidesDeck slidesDeckName="bonus-lesson-grids" />
-//       </>
-//     ),
-//   },
-//   {
-//     path: '/bonus-lessons/tables',
-//     component: () => (
-//       <>
-//         <Title title="Bonus Lesson | Tables" />
-//         <SlidesDeck slidesDeckName="bonus-lesson-tables" />
-//       </>
-//     ),
-//   },
-//   {
-//     path: '/bonus-lessons/javascript-history',
-//     component: () => (
-//       <>
-//         <Title title="Bonus Lesson | JavaScript history" />
-//         <SlidesDeck slidesDeckName="bonus-lesson-js-history" />
-//       </>
-//     ),
-//   },
-// ];
+export const bonusLessonRoutes = [
+  {
+    path: '/bonus-lessons/installfest-macos',
+    component: () => (
+      <>
+        <Title title="Bonus Lesson | Installfest macOS" />
+        <SlidesDeck slidesDeckName="bonus-lesson-installfest-macos" />
+      </>
+    ),
+  },
+  {
+    path: '/bonus-lessons/installfest-windows',
+    component: () => (
+      <>
+        <Title title="Bonus Lesson | Installfest Windows" />
+        <SlidesDeck slidesDeckName="bonus-lesson-installfest-windows" />
+      </>
+    ),
+  },
+];
 
 // Final project
 // Path: /final-project-brief
 
-// export const FinalProjectRoute = {
-//   path: '/final-project-brief',
-//   component: () => {
-//     const Content = lazy(() => import('../pages/final-project-brief'));
-//     return (
-//       <>
-//         <Title title="Final project brief" />
-//         <Suspense fallback={<Loading />}>
-//           <Content />
-//         </Suspense>
-//       </>
-//     );
-//   },
-// };
+export const FinalProjectRoute = {
+  path: '/final-project-brief',
+  component: () => {
+    const Content = lazy(() => import('../pages/final-project-brief'));
+    return (
+      <>
+        <Title title="Final project brief" />
+        <Suspense fallback={<Loading />}>
+          <Content />
+        </Suspense>
+      </>
+    );
+  },
+};
 
 // Bonus lessons pags
 // Path: //bonus-lessons
-// export const BonusLessonsRoute = {
-//   path: '/bonus-lessons',
-//   component: () => {
-//     const Content = lazy(() => import('../pages/bonus-lessons'));
-//     return (
-//       <>
-//         <Title title="Bonus Lessons" />
-//         <Suspense fallback={<Loading />}>
-//           <Content />
-//         </Suspense>
-//       </>
-//     );
-//   },
-// };
+export const BonusLessonsRoute = {
+  path: '/bonus-lessons',
+  component: () => {
+    const Content = lazy(() => import('../pages/bonus-lessons'));
+    return (
+      <>
+        <Title title="Bonus Lessons" />
+        <Suspense fallback={<Loading />}>
+          <Content />
+        </Suspense>
+      </>
+    );
+  },
+};
