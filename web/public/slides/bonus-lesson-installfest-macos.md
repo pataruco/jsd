@@ -169,6 +169,10 @@ We will go into a bit more detail about the shell later on in the course but a s
 
 Macs before OSX Catalina came shipped with a shell called 'bash' by default. Bash stands for **'Bourne-again shell'**, referring to its objective as a free replacement for the Bourne shell which was developed by [Steven Bourne](https://en.wikipedia.org/wiki/Stephen_R._Bourne).
 
+We are going to use another shell called zsh because it has some extra features to make our web-development easier.
+
+The American English pronunciation of Z is "zee", so Z shell rhymes with C shell, which sounds like seashell. zsh was also the login of the original developer Paul Falstad's Yale professor Zhong Shao
+
 ---
 
 ## 💻 macOS Installfest

@@ -78,15 +78,15 @@ const About: React.FC = () => (
       </p>
 
       <p>
-        The content on the slides is my adaption from official FEWD 3.0
-        curriculum and the experiences I have had as a teacher assistant and
-        lead instructor in the last 6 years of teaching.
+        The content on the slides is my adaption from official JSD curriculum
+        and the experiences I have had as a teacher assistant and lead
+        instructor in the last 6 years of teaching.
       </p>
 
       <p>
         The code for this website and the content of the slides are available on{' '}
         <a
-          href="https://github.com/pataruco/fewd"
+          href="https://github.com/pataruco/jsd"
           target="_blank"
           rel="noreferrer"
           className="external-link"
