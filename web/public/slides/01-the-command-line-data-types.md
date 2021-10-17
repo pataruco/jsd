@@ -10,6 +10,11 @@ class: frontpage
 
 ## Learning Objectives
 
+- Working with files/directories via the Terminal
+- Basic Git commands and the difference between Git and Github
+- Running basic JS code in the CLI
+- Introduction to variables and primitive data types
+
 ---
 
 ## The terminal
@@ -205,7 +210,7 @@ In the respective files (goals.html and worries.html), write your top three goal
 - **Clone**: a git command that copies/clones a repo to your local
 - **Commit**: a snapshot of the code that has been saved to the projects history
 - **Push**: a git command that sends your commits (saved changes) to a remote repository (on GitHub)
-- **Pull**: a git command that ‘pulls’ any changes pushed by other developers to your local
+- **Pull**: a git command that ‘pulls' any changes pushed by other developers to your local
 
 ---
 
@@ -249,9 +254,9 @@ In the respective files (goals.html and worries.html), write your top three goal
 <div class="row">
   <ul>
     <li>Node.js is an open-source, cross-platform runtime environment for developing server-side Web applications</li>
-    <li>Interprets JS using Chrome’s V8 engine</li>
+    <li>Interprets JS using Chrome's V8 engine</li>
     <li>Faster execution with non-blocking asynchronous input/output</li>
-    <li>Written in C, C++ and JS (so it’s not a JS framework!)</li>
+    <li>Written in C, C++ and JS (so it's not a JS framework!)</li>
     <li>Allows us to run JavaScript from our terminal applications</li>
     <li>Creating and running scripts</li>
     <li>File management</li>
@@ -348,3 +353,209 @@ In JavaScript they include:
 - Booleans: `true`
 - `Null`
 - `Undefined`
+
+---
+
+## Strings
+
+- Strings are defined by backticks (` `` `), double (`""`) or single (`''`) quotes.
+- They can be "added" together called concatenation using the string operator (`+`)
+- They can be manipulated with methods like `.substring()` and `.toLowerCase()`
+
+### Oficial documentation: [https://mdn.io/String](https://mdn.io/String)
+
+---
+
+## Strings
+
+### Methods and properties
+
+.row[
+.col[
+
+### `toLowerCase()` method
+
+```javascript
+const str = 'Hello World';
+const res = str.toLowerCase();
+
+// res is hello world
+```
+
+]
+.col[
+
+### `length` property
+
+```javascript
+const str = 'Hello World';
+const res = str.length;
+
+// res is 11
+```
+
+]
+]
+
+### Oficial documentation: [https://mdn.io/String](https://mdn.io/String)
+
+---
+
+## Numbers
+
+- Numbers can be written as signed or unsigned, integers, decimals, in e-notation (`123e-1`), hexadecimal (`0xff`), binary (`0b11`), even octal (`0o10`)
+- You can perform arithmetic operations on them
+- If JavaScript can't perform an arithmetic operation because the operands aren't numbers (or able to be coerced into a number), it returns `NaN`
+
+### Oficial documentation: [https://mdn.io/Number](https://mdn.io/Number)
+
+---
+
+## Numbers
+
+- Can be stored in variables
+- You can perform arithmetic operations on them `+` `-` `/` `*` `%`
+- Can lead to some odd results
+
+```node
+> 0.1 + 0.2
+0.30000000000000004
+>
+```
+
+<a href="https://medium.com/better-programming/why-is-0-1-0-2-not-equal-to-0-3-in-most-programming-languages-99432310d476" class="external-link">Why? 🤷</a>
+
+---
+
+## Numbers
+
+### Assigment operators
+
+|                             | Operator | Initial value | Example  | Result   |
+| --------------------------- | -------- | ------------- | -------- | -------- |
+| Assign value to variable    | `=`      | `let a = 8`   | `a = 6`  | **`6`**  |
+| Add value to variable       | `+=`     | `let a = 8`   | `a += 6` | **`14`** |
+| Substract value to variable | `-=`     | `let a = 8`   | `a -= 6` | **`2`**  |
+
+---
+
+## Numbers
+
+### Compound operators
+
+|                            | Operator | Initial value | Example | Result  |
+| -------------------------- | -------- | ------------- | ------- | ------- |
+| Adds `1` from a value      | `++`     | `let a = 8`   | `a++`   | **`9`** |
+| Substract `1` from a value | `--`     | `let a = 8`   | `a--`   | **`6`** |
+
+---
+
+## Numbers
+
+### Arithmetic operators
+
+|                | Operator | Example | Result    |
+| -------------- | -------- | ------- | --------- |
+| Addition       | `+`      | `5 + 2` | **`7`**   |
+| Substration    | `-`      | `5 - 2` | **`3`**   |
+| Multiplication | `*`      | `5 * 2` | **`10`**  |
+| Division       | `/`      | `5 / 2` | **`2.5`** |
+| Remainder      | `%`      | `5 % 2` | **`1`**   |
+
+---
+
+## Number
+
+### `%` modulus
+
+> the remainder is the integer "left over" after dividing one integer by another
+
+```node
+> 9 % 4
+1
+```
+
+```txt
+ .... .... .
+\___/ \__/ |
+  |    |   |
+  4    4   1 <--- Remainder (%)
+```
+
+---
+
+## Math in JavaScript
+
+The `Math` built-in object has properties and methods for mathematical constants and functions:
+
+- **`Math.PI`**: constant for Pi
+- **`Math.abs()`**: returns the absolute value of the number
+- **`Math.floor()`**: returns the largest integer <= to the number
+- **`Math.max()`**: returns the largest of zero or more numbers
+- **`Math.random()`**: returns a pseudo-random number between 0 and 1
+
+### Oficial documentation: [http://mdn.io/Global_Objects/Math](http://mdn.io/Global_Objects/Math)
+
+---
+
+## Complex data types
+
+- Complex data types in programming are made up of other data types.
+- Complex data types in JavaScript are fundamentally Objects.
+- They are copied by reference.
+- In JavaScript they include:
+  - Arrays: `['Pedro', 'Alex', 'Ana']`
+  - Objects: `{ name: 'Pedro', role: 'Lead instructor' }`
+  - Functions
+
+---
+
+## Arrays
+
+- A data type that can contain any other data type
+- Arrays are like lists
+- The values inside them (array elements) are accessed by their index (position in the array)
+- They are best for homogenous data
+
+```javascript
+const fruits = ['apple', 'banana', 'oranges'];
+```
+
+---
+
+## Objects
+
+- A data type that can contain any other data type
+- Objects are like objects in the real world. They represent things that can be described by properties and behaviours or actions.
+- The values within the object are accessed via their property name.
+
+```javascript
+const instructor = {
+  name: 'Pedro',
+  dob: new Date('1978-07-18'),
+  hometown: 'London',
+  countryOfBirth: '🇻🇪',
+};
+```
+
+---
+
+## Look ahead to next lesson
+
+- Running JavaScript in the browser
+- Creating arrays and accessing their values
+- Working with collections and loops
+
+---
+
+## Homework
+
+---
+
+class: frontpage
+
+<div>
+  <h2>JavaScript Development</h2>
+  <hr/>
+  <h1>End of presentation</h1>
+</div>
