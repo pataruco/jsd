@@ -25,6 +25,8 @@
   },
   "version": "1.0.0",
   "workspaces": [
+    "homeworks",
+    "labs",
     "web"
   ]
 }

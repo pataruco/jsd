@@ -1,4 +1,6 @@
 {
   "npmClient": "yarn",
-  "packages": ["web"]
+  "packages": ["homeworks", "labs", "web"],
+  "version": "0.0.0",
+  "useWorkspaces": true
 }
