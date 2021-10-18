@@ -16,15 +16,15 @@ export const lessonRoutes = [
       </>
     ),
   },
-  // {
-  //   path: '/week-1/lesson-2',
-  //   component: () => (
-  //     <>
-  //       <Title week={1} lesson={2} />
-  //       <SlidesDeck slidesDeckName="02-advanced-html-intro-to-css" />
-  //     </>
-  //   ),
-  // },
+  {
+    path: '/week-1/lesson-2',
+    component: () => (
+      <>
+        <Title week={1} lesson={2} />
+        <SlidesDeck slidesDeckName="01-the-command-line-data-types" />
+      </>
+    ),
+  },
   // {
   //   path: '/week-2/lesson-3',
   //   component: () => (
