@@ -20,4 +20,4 @@ delete-zip:
 
 .PHONY : zip-all
 zip-all:
-	@for f in $(shell ls ${BASEDIR}); do echo $${f}; done
+	@for f in $(shell ls ${BASEDIR} -d */); do echo $${f}; done
