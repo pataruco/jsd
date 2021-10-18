@@ -80,7 +80,7 @@ Here are some common UNIX commands that you'll want to get familiar with as they
 
 ## Individual practice
 
-## [Terminal individual practice 🚀]()
+## [Terminal individual practice 🚀](https://github.com/pataruco/jsd/raw/master/labs/terminal-individual/terminal-individual-starter-code.zip)
 
 ---
 
@@ -242,7 +242,7 @@ Use `const` unless you need to reassign a value (then use `let`)
 
 ## Code along
 
-### [Node lab 🧪]()
+### [Node lab 🧪](https://github.com/pataruco/jsd/raw/master/labs/node/node-starter-code.zip)
 
 ---
 
@@ -455,6 +455,8 @@ const instructor = {
 ---
 
 ## Homework
+
+## [Download instructions](https://github.com/pataruco/jsd/raw/master/homeworks/week-1/week-1-starter-code.zip)
 
 ---
 
