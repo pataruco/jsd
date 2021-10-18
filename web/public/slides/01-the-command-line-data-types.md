@@ -74,101 +74,13 @@ Here are some common UNIX commands that you'll want to get familiar with as they
 
 ## Code along
 
-???
-
-1.  Navigate to your Documents Folder from your root directory. `cd ~` and then `cd Documents`
-
-2.  Create a directory named Advanced_JS. `mkdir advanced_js`
-
-3.  Change into this directory. `cd advanced_js`
-
-4.  Create a file named _index.html_ using the touch command. `touch index.html`
-
-5.  Demonstrate how to open **"index.html"** in VS Codde from the terminal. `code`
-
-6.  Using HTML comments type "This is how you should take notes in class." Some students will need a refresher on how to write HTML comments (i.e. `<!-- comment -->`). Briefly explain comments and let them know we'll be talking more about comments in the next lesson.
-
-7.  Create an empty directory within the Advanced JS folder and remove it. `mkdir test_folder ` and `rmdir test_folder `
-
----
-
-## Group practice
-
-- Navigate to the desktop
-- Create a directory called films
-- Go into this directory
-- Create a file for your favourite film called [FILM NAME].txt
-- Open this file in VSCode
-- Create 3 more files using a single terminal command
-- Open the entire directory inside VSCode so you can see all 4 files and make some changes (remember to save the changes)
-- Delete your least 2 favourite films
+## [Terminal code along lab 🧪]()
 
 ---
 
 ## Individual practice
 
-1. Within your <em>JSD</em> folder, create a folder titled <em>goals</em>.
-2. Navigate into the goals folder, then create three empty files:
-
-   - goals.html
-   - worries.html
-   - index.html
-
-3. Open Visual Studio Code, click **File > Open**, navigate to your newly created JSD/goals folder, then open it. All 3 files you created should be displayed in your editor's sidebar.
-
-In the respective files (goals.html and worries.html), write your top three goals and top three worries for this course.
-
-<em>Reminder:</em> to create an ordered list in HTML, use the following structure:
-
-```html
-<ol>
-  <li>Item 1 content</li>
-  <li>Item 2 content</li>
-</ol>
-```
-
----
-
-## Individual practice (cont.)
-
-4. Paste the following contents into index.html:
-
-```html
-<html>
-  <head></head>
-  <body>
-    <p>
-      <a href="goals.html">
-        <img src="http://i.imgur.com/dosK05U.gif" />
-      </a>
-    </p>
-
-    <p>
-      <a href="worries.html">
-        <img src="http://i.imgur.com/2s0HwpM.gif" />
-      </a>
-    </p>
-  </body>
-</html>
-```
-
----
-
-## Individual practice (cont.)
-
-5. Save your changes to all 3 files.
-
-6. Open index.html with your browser **(Right Click > Open In Default Browser)**. Each image is a link to one of the other files you created.
-
-7. Follow each link, then make sure you see your goals and worries in the linked files.
-
-```html
-<style>
-  em {
-    color: yellow;
-  }
-</style>
-```
+## [Terminal individual practice 🚀]()
 
 ---
 
@@ -330,13 +242,7 @@ Use `const` unless you need to reassign a value (then use `let`)
 
 ## Code along
 
-???
-
-Get students to start a node REPL and execute basic calculations showing the difference between const let and var
-
-Get them to exit the REPL
-
-Send them the js file in class01 folder and get them to open it in NODE
+### [Node lab 🧪]()
 
 ---
 
