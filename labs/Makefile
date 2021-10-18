@@ -4,6 +4,7 @@ BASEDIR = $(PWD)
 
 starter_code=starter-code
 solution_code=solution-code
+folder=labs
 
 .PHONY : create-zip
 create-zip:
@@ -21,3 +22,12 @@ zip-all:
 .PHONY : delete-all
 delete-all:
 	@for f in $(shell ls -d */ ${BASEDIR} | cut -f1 -d'/'); do make delete-zip application=$${f}; done
+
+.PHONY : get-starter-download-path
+get-starter-download-path:
+	echo https://github.com/pataruco/jsd/raw/master/${folder}/${application}/${application}-starter-code.zip | pbcopy
+	
+.PHONY : get-solution-download-path
+get-solution-download-path:
+	echo https://github.com/pataruco/jsd/raw/master/${folder}/${application}/${application}-solution-code.zip | pbcopy
+

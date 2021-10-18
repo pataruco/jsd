@@ -74,7 +74,7 @@ Here are some common UNIX commands that you'll want to get familiar with as they
 
 ## Code along
 
-## [Terminal code along lab 🧪]()
+## [Terminal code along lab 🧪](https://github.com/pataruco/jsd/raw/master/labs/terminal-code-along/terminal-code-along-starter-code.zip)
 
 ---
 
