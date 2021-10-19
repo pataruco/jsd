@@ -46,9 +46,9 @@ export const lessonRoutes = [
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(2)
-  .fill(1) // Set number of weeks
-  .map((item, i) => (i === 0 ? 1 : item + i));
+export const weeks = new Array(2) // Set number of weeks
+  .fill(1)
+  .map((item, i) => item + i);
 
 export const weekRoutes = weeks.map((weekNumber) => ({
   path: `/week-${weekNumber}`,
