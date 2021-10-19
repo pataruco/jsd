@@ -64,7 +64,7 @@ import Week from '../../components/week';
 
 const weekConfig = {
   // bonuses,
-  firstLessonTitle: 'Collections & loops',
+  firstLessonTitle: 'Arrays & loops',
   // homeworkPath: '/week-2/lesson-4#22',
   // resources,
   secondLessonTitle: 'Functions, scope & conditionals',

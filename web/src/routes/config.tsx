@@ -29,7 +29,7 @@ export const lessonRoutes = [
     component: () => (
       <>
         <Title week={2} lesson={2} />
-        <SlidesDeck slidesDeckName="02-collections-loops" />
+        <SlidesDeck slidesDeckName="02-arrays-loops" />
       </>
     ),
   },
