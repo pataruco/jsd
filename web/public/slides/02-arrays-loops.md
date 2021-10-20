@@ -81,6 +81,8 @@ undefined
 
 ---
 
+class: lab
+
 ## Pair activity
 
 - Open the starter code for `0-arrays-loops-exercise`
@@ -104,7 +106,9 @@ undefined
 
 ---
 
-## Code along 👩🏾‍💻 🧑🏻‍💻 👨🏼‍💻
+class: code-along
+
+# Code along
 
 ???
 
@@ -137,6 +141,8 @@ for (let i = 0; i < teams.lenght; i++) {
 - `i++`: change to iterator ath the end of each loop (increment or decrement)
 
 ---
+
+class: lab
 
 ## Pair activity
 
@@ -188,6 +194,8 @@ team.forEach(printInConsole);
 
 ---
 
+class: lab
+
 ## Pair activity
 
 - Open the starter code for `0-arrays-loops-exercise`
@@ -210,6 +218,8 @@ team.forEach(printInConsole);
 
 ---
 
+class: lab
+
 ## Individual activity
 
 - Open the starter code for `0-arrays-loops-exercise`
@@ -223,8 +233,8 @@ team.forEach(printInConsole);
 1. Open the starter code for `4-arrays-loops-exercise-2`
 2. Write code for a website shopping cart that calculates the sales tax for each item in a cart array and stores the result in a 2nd array
    Calculate the total with tax of all items and store the result in a new variable
-3. BONUS: Update your code to round each item to the nearest penny (hint: read up on `Math.round`)
-4. BONUS: Rewrite your code using the `Array.map()` method
+3. **Bonus**: Update your code to round each item to the nearest penny (hint: read up on `Math.round`)
+4. **Bonus**: Rewrite your code using the `Array.map()` method
 
 ---
 
