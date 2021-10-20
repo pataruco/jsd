@@ -29,8 +29,6 @@ console.log('Question 0: ' + q0);
 
 // Your code here
 
-const q1 = ['image1.png', 'image2.png', 'image3.png'];
-
 /**
  * Question 2
  * Create a variable called q2, and set its value to the value of the first
@@ -38,8 +36,6 @@ const q1 = ['image1.png', 'image2.png', 'image3.png'];
  */
 
 // Your code here
-
-const q2 = q1[0];
 
 /**
  * Question 3
@@ -49,10 +45,6 @@ const q2 = q1[0];
 
 // Your code here
 
-const q3 = q1.length;
-
-console.log({ q3 });
-
 /**
  * Question 4
  * Create a variable called q4, and store the last element of the q1 array
@@ -61,10 +53,6 @@ console.log({ q3 });
  */
 
 // Your code here
-
-const q4 = q1[q1.length - 1];
-
-console.log({ q4 });
 
 // ____________________________________________________________________________
 // SECTION 2: Iterating through array elements
@@ -80,20 +68,6 @@ console.log({ q4 });
  */
 
 // Your code here
-
-const number = [{ name: 'tristan' }, { name: 'alexander' }, { name: 'hall' }];
-
-// let q5 = 0;
-function say(data) {
-  console.log(data.name);
-  if (data.name === 'tristan') {
-    console.log('that is my first name');
-  }
-}
-
-number.forEach(say);
-
-// multiply(5);
 
 /**
  * Question 6

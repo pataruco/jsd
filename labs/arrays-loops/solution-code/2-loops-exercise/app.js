@@ -63,22 +63,19 @@ for (let i = 1; i <= exponent; i++) {
  * (https://mdn.io/while)
  **/
 
-// let i = 1;
-/**
- * while (i <= exponent) {
- *     console.log("2 ^ " + i + " = " + Math.pow(2,i));
- *     i++;
- * }
- **/
+let i = 1;
+
+while (i <= exponent) {
+  console.log('2 ^ ' + i + ' = ' + Math.pow(2, i));
+  i++;
+}
 
 /**
  * BONUS 3: Rewrite your code to use a `do/while` loop rather than a `for` loop
  * or `while` loop. (https://mdn.io/do...while)
  **/
 
-/**
- * do {
- *     console.log("2 ^ " + i + " = " + Math.pow(2,i));
- *     i++;
- * } while (i <= exponent);
- **/
+do {
+  console.log('2 ^ ' + i + ' = ' + Math.pow(2, i));
+  i++;
+} while (i <= exponent);

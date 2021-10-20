@@ -12,7 +12,7 @@
 
 // This question is already completed for you as an example:
 let q0 = 'GA JSD Lesson 3 lab';
-// console.log('Question 0: ' + q0);
+console.log('Question 0: ' + q0);
 
 // ____________________________________________________________________________
 // SECTION 1: Arrays
@@ -25,9 +25,8 @@ let q0 = 'GA JSD Lesson 3 lab';
  * values.
  */
 
-// Your code here
-// let q1 = ['image1.png', 'image2.png', 'image3.png'];
-// console.log('Question 1: ' + q1);
+let q1 = ['image1.png', 'image2.png', 'image3.png'];
+console.log('Question 1: ' + q1);
 
 // /**
 //  * Question 2
@@ -36,8 +35,8 @@ let q0 = 'GA JSD Lesson 3 lab';
 //  */
 
 // // Your code here
-// let q2 = q1[0];
-// console.log('Question 2: ' + q2);
+let q2 = q1[0];
+console.log('Question 2: ' + q2);
 
 // /**
 //  * Question 3
@@ -46,8 +45,8 @@ let q0 = 'GA JSD Lesson 3 lab';
 //  */
 
 // // Your code here
-// let q3 = q1.length;
-// console.log('Question 3: ' + q3);
+let q3 = q1.length;
+console.log('Question 3: ' + q3);
 
 // /**
 //  * Question 4
@@ -57,8 +56,8 @@ let q0 = 'GA JSD Lesson 3 lab';
 //  */
 
 // // Your code here
-// let q4 = q1[q1.length - 1];
-// console.log('Question 4: ' + q4);
+let q4 = q1[q1.length - 1];
+console.log('Question 4: ' + q4);
 
 // ____________________________________________________________________________
 // SECTION 2: Iterating through array elements
@@ -81,7 +80,7 @@ numbers.forEach(function (element) {
   total = total + element;
 });
 let q5 = total / numbers.length;
-// console.log('Question 5: ' + q5);
+console.log('Question 5: ' + q5);
 
 /**
  * Question 6
@@ -99,6 +98,7 @@ let q6 = [100, 200, 300, 400, 500];
 q6.forEach(function (element, index) {
   q6[index] = element + 5;
 });
+
 console.log('Question 6: ' + q6);
 
 // ____________________________________________________________________________
@@ -134,4 +134,4 @@ console.log('Question 7: ' + q7);
 let q8 = numbers.reduce((accumulator, currentValue) => {
   return accumulator + currentValue;
 });
-// console.log('Question 8: ' + q8);
+console.log('Question 8: ' + q8);

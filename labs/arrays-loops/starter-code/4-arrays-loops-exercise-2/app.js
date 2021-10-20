@@ -39,8 +39,6 @@ console.log('Cart contents: ' + cart);
  the total as the value of the cartTotalWithTax variable. 
 */
 
-let method;
-
 /*
  6. Log the cartTotalWithTax variable to the console. Be sure to label your 
  output in the console.
