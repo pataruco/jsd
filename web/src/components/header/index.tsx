@@ -11,6 +11,7 @@ import {
   openMobileMenu,
 } from '../../redux/navigation-menu';
 import GALogoTextWhite from '../icons/ga-text-white';
+import { weeks } from '../../routes/config';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -103,7 +104,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const weeksIterator = new Array(1).fill('Week');
+export const weeksIterator = weeks.fill('Week');
 
 export const Weeks: React.FC = () => {
   const { weekIsOpen } = useSelector(selectNavigationMenu);

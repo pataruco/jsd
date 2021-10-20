@@ -8,7 +8,7 @@ import Page from '../components/page';
 
 const Weeks = [
   'Installfest, The Command Line & Data Types',
-  // 'Collections,Loops, Conditionals & Functions',
+  'Arrays, Loops, Conditionals & Functions',
   // 'Scope, Variables, Objects & JSON',
   // 'Slackbot Lab & The DOM & jQuery',
   // 'JavaScript Events, AJAX & APIs',
