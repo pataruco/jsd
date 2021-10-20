@@ -187,3 +187,61 @@ team.forEach(printInConsole);
 ```
 
 ---
+
+## Pair activity
+
+- Open the starter code for `0-arrays-loops-exercise`
+- In the `app.js` file, complete questions **5-6**
+- Answer these questions using `forEach()` loops, not for loops.
+- Note that most of your answers should be stored in variables called `q1`, `q2` etc., and the variables printed to the console.
+  - See Question **0**, which is already completed, - for an example.
+
+---
+
+## (Some) arrays methods (part 2.)
+
+| Method      | Use                                                                                                |
+| ----------- | -------------------------------------------------------------------------------------------------- |
+| `forEach()` | Executes a provided function once per array element                                                |
+| `every()`   | Tests whether all elements in the array pass the test implemented by the provided function         |
+| `some()`    | Tests whether some element in the array passes the text implemented by the provided function       |
+| `filter()`  | Creates a new array with all elements that pass the test implemented by the provided function      |
+| `map()`     | Creates a new array with the results of calling a provided function on every element in this array |
+
+---
+
+## Individual activity
+
+- Open the starter code for `0-arrays-loops-exercise`
+- In the `app.js` file, complete questions **7**
+- As in the section you did earlier, your answer should be stored in a variable called `q7` and the variable logged to the console.
+
+---
+
+## Bonus activity
+
+1. Open the starter code for `4-arrays-loops-exercise-2`
+2. Write code for a website shopping cart that calculates the sales tax for each item in a cart array and stores the result in a 2nd array
+   Calculate the total with tax of all items and store the result in a new variable
+3. BONUS: Update your code to round each item to the nearest penny (hint: read up on `Math.round`)
+4. BONUS: Rewrite your code using the `Array.map()` method
+
+---
+
+## Look ahead to next lesson
+
+### Functions and scope
+
+- At the end of next class, we'll cover:
+- Working with functions
+- Understanding scope
+
+---
+
+class: frontpage
+
+<div>
+  <h2>JavaScript Development</h2>
+  <hr/>
+  <h1>End of presentation</h1>
+</div>
