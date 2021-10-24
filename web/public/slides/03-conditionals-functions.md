@@ -281,3 +281,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 ### Slackbot lab
 
 - Building your own Slack Bot! 🤖
+
+class: frontpage
+
+<div>
+  <h2>JavaScript Development</h2>
+  <hr/>
+  <h1>End of presentation</h1>
+</div>
+
+---
