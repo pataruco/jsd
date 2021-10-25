@@ -1,7 +1,7 @@
 'use strict';
 /*
   Write code that generates random addresses
-  Each time you load or reload the page in a browser, your program should log
+  Each time you run it, your program should log
   a new randomly-generated address to the console.
 
   Step 1:
@@ -14,14 +14,14 @@
     then logs the result to the console.
 
     HINT: You will need to use methods in JavaScript's Math object
-    (https://www.w3schools.com/js/js_math.asp)
+    (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
   Step 3:
-    Save your work, load your app in the browser, open the console, and verify
+    Save your work, run the program in Node, and verify
     that a random address is logged.
 
   Step 4:
-    Reload the page and verify that a different random address is logged.
+    Rerun the program again and verify that a different random address is logged.
 
   Example output:
     12 Dolphin Street, London , W11 2SE
