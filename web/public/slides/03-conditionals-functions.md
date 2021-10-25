@@ -116,6 +116,8 @@ class: code-along
 
 # Code Along
 
+Download [labs](https://github.com/pataruco/jsd/raw/master/labs/functions/functions-starter-code.zip)
+
 ???
 Write a `sayHello` function write in declaration, expression and arrow functions.
 `console.log` a variable with each one
@@ -133,7 +135,7 @@ class: lab
 
 ---
 
-## Paremeters
+## Parameters
 
 ### Parameters make our functions reusable
 
@@ -145,7 +147,7 @@ class: lab
 
 ---
 
-## Paremeters
+## Parameters
 
 ### Using parameters
 
@@ -160,7 +162,7 @@ sayHello('Jen'); // 'Jen' is an argument
 
 ---
 
-## Paremeters
+## Parameters
 
 ### Using multiple parameters
 
@@ -174,7 +176,7 @@ add(2, 3); // 2 and 3 are arguments
 
 ---
 
-## Paremeters
+## Parameters
 
 ### Using default parameters
 
