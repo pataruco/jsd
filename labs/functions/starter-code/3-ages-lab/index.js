@@ -1,3 +1,4 @@
+'use strict';
 /*
     When programming user interfaces, you will often need to display results based on a certain input.
     In this exercise, you will design a program that will let users know what legal privileges people in the U.K. enjoy based on their age.
@@ -19,13 +20,3 @@
 
     BONUS 2: Rewrite your code to use a switch statement rather than if and else statements. (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 */
-
-'use strict';
-const first = 'tristan';
-
-function name() {
-  console.log(first);
-  return first;
-}
-
-name();

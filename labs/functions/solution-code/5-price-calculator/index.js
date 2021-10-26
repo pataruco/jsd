@@ -28,9 +28,6 @@
 function calcTotal() {}
 
 // accepts a price in euros and returns the same price in pounds
-function convertEurosToPounds(euroPrice) {
-  let poundPrice = euroPrice * 0.9;
-  return poundPrice;
-}
+function convertEurosToPounds(euroPrice) {}
 
 // add statements below to call your function

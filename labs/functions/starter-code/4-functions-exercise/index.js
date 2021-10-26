@@ -22,8 +22,6 @@ function hotOrNot(temp) {
   temp > 25 ? true : false;
 }
 
-hotOrNot(25);
-
 // ---- B ------
 
 // Look at the below function. Predict what will happen when the function is called.
@@ -32,8 +30,6 @@ function priceCheck(title, listPrice, taxRate) {
   let total = listPrice + salesTax;
   console.log(title + ' costs £' + total + '.');
 }
-
-priceCheck('Catcher in the Rye', 15, 0.1);
 
 // -------------------------------------------------------------------------------
 // Part 3 - declaring variables inside functions
@@ -54,24 +50,3 @@ priceCheck('Catcher in the Rye', 15, 0.1);
 // the function should console.log "Coming right up! A pizza with" + your 3 arguments/toppings
 
 // invoke the function with your 3 favourite toppings
-
-const add = (a, b) => {
-  return a + b;
-};
-
-const result = add(9, 5);
-
-console.log(result);
-
-function makeGreeting(name, establishment, isCurrent) {
-  if (isCurrent) {
-    return `Hello ${name}, we hope you are enjoying your time at ${establishment}`;
-  }
-  return `Hello ${name}, welcome to ${establishment} where we love JavaScript`;
-}
-
-const anasGreeting = makeGreeting('Ana', 'GA', true);
-console.log(anasGreeting);
-
-const anniesGreeting = makeGreeting('Annie', 'General Assembly');
-console.log(anniesGreeting);
