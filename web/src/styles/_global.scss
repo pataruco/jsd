@@ -46,6 +46,18 @@ a {
       background-size: cover;
     }
   }
+  &.download-link {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 131.102 92.126'%3E%3Cpath d='M86.753 53.163v11.232H46.105V53.163h-7.813v14.534c0 1.822 1.746 3.3 3.912 3.3h48.449c2.164 0 3.912-1.476 3.912-3.3V53.163h-7.812zm-21.04-1.113L54.528 40.624s-1.701-1.358.144-1.358h6.303v-16.63s-.25-.81 1.193-.81h8.872c1.04 0 1.017.682 1.017.682v16.415h5.818c2.24 0 .553 1.422.553 1.422S68.91 51.024 67.584 52.144c-.955.812-1.87-.095-1.87-.095z'/%3E%3C/svg%3E%0A");
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
 p,
