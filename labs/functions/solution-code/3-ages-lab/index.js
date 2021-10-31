@@ -20,3 +20,39 @@
 
     BONUS 2: Rewrite your code to use a switch statement rather than if and else statements. (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 */
+
+const legalPriviligies = (age) => {
+  const priviligies = [];
+
+  switch (true) {
+    case age <= 16:
+      priviligies.push('You can go to school');
+      break;
+
+    case age >= 68:
+      priviligies.push('You can collect pension');
+
+    case age >= 40 && age < 68:
+      priviligies.push('You can run for prime minister');
+
+    case age >= 25 && age < 40:
+      priviligies.push('You can buy a house');
+
+    case age >= 21 && age < 25:
+      priviligies.push('You can rent a car');
+
+    case age >= 18 && age < 21:
+      priviligies.push('you can drink alcohol');
+
+    case age >= 17 && age < 18:
+      priviligies.push('You can drive');
+  }
+
+  if (priviligies.length > 0) {
+    priviligies.forEach((privilige) => console.log(privilige));
+  }
+};
+
+const age = Number(window.prompt('How old are you?'));
+
+legalPriviligies(age);
