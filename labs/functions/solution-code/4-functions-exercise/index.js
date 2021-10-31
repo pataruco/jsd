@@ -4,11 +4,16 @@
 // -------------------------------------------------------------------------------
 
 // 1. Declare a function. Give it the name "logDate".
+
+const logDate = () => {
+  console.log(new Date());
+};
 // a. Inside the function, log the following value to the console:
 //    new Date()
 //    (Note: This code uses the Date object to fetch the current date and time.)
 
 // b. Call the function
+logDate();
 
 // -------------------------------------------------------------------------------
 // Part 2 - Predicting outcomes
@@ -39,7 +44,18 @@ function priceCheck(title, listPrice, taxRate) {
 // assign the variables a value eg. 'pepperoni' or 'cheese'
 // console.log the sentence "Coming right up! A pizza with" + your 3 variables/toppings
 
+const makeAPizza = () => {
+  const topping1 = 'pepperoni';
+  const topping2 = 'cheese';
+  const topping3 = 'peppers';
+
+  console.log(
+    `Coming right up! A pizza with ${topping1}, ${topping2} and ${topping3}`,
+  );
+};
+
 // invoke the function
+makeAPizza();
 
 // -------------------------------------------------------------------------------
 // Part 4 - Passing parameters
@@ -49,4 +65,17 @@ function priceCheck(title, listPrice, taxRate) {
 // the function should take 3 arguments which will be the toppings
 // the function should console.log "Coming right up! A pizza with" + your 3 arguments/toppings
 
+const makeAVeggiePizza = ({
+  topping1 = 'peppers',
+  topping2 = 'onions',
+  topping3 = 'sweetcorn',
+} = {}) => {
+  console.log(
+    `Coming right up! A pizza with ${topping1}, ${topping2} and ${topping3}`,
+  );
+};
+
 // invoke the function with your 3 favourite toppings
+
+makeAVeggiePizza();
+makeAVeggiePizza({ topping1: 'blue cheese' });

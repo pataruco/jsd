@@ -25,9 +25,32 @@
 'use strict';
 
 // complete the calcTotal() function below:
-function calcTotal() {}
+const calcTotal = (
+  { productPrice, taxRate, shippingCost, currency } = {
+    ...arguments,
+    currency: 'pounds',
+  },
+) => {
+  if (currency === 'euros') {
+    productPrice = convertEurosToPounds(productPrice);
+  }
+
+  const tax = productPrice * (taxRate / 100);
+  const totalCost = Number((productPrice + tax + shippingCost).toFixed(2));
+
+  console.log(totalCost);
+};
 
 // accepts a price in euros and returns the same price in pounds
-function convertEurosToPounds(euroPrice) {}
+function convertEurosToPounds(euroPrice) {
+  return euroPrice * 1.18;
+}
 
 // add statements below to call your function
+
+calcTotal({
+  productPrice: 10,
+  taxRate: 12.5,
+  shippingCost: 2,
+  // currency: 'pounds',
+});
