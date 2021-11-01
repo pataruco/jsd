@@ -13,6 +13,10 @@ const resources = [
     'Back To Basics: JavaScript Object Syntax',
     'https://www.sitepoint.com/back-to-basics-javascript-object-syntax/',
   ],
+  [
+    'JSON',
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON',
+  ],
 ];
 
 const weekConfig = {
