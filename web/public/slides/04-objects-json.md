@@ -39,7 +39,7 @@ In computer science, an object is a value in memory which is possibly referenced
 
 ---
 
-## Objets
+## Objects
 
 ### Get and set properties
 
@@ -53,7 +53,7 @@ class: code-along
 # Code Along
 
 <h2>
-  <a href="#" class="download-link">
+  <a href="https://github.com/pataruco/jsd/raw/master/labs/objects-json/objects-json-starter-code.zip" class="download-link">
     Download labs
   </a>
 </h2>
@@ -422,5 +422,15 @@ class: lab
 
 - Open `5-json-exercise`
 - Answer the questions in the `app.js`
+
+---
+
+class: frontpage
+
+<div>
+  <h2>JavaScript Development</h2>
+  <hr/>
+  <h1>End of presentation</h1>
+</div>
 
 ---
