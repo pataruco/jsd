@@ -8,6 +8,14 @@ class: frontpage
 
 ---
 
+## Learning objectives
+
+- Working with objects and methods
+- Intro to JSON
+- Working with JSON-formatted data
+
+---
+
 ## Objects
 
 In computer science, an object is a value in memory which is possibly referenced by an identifier.
@@ -144,6 +152,48 @@ const shoppingCart = {
 
 ---
 
+## Destructuring
+
+Often when working with objects, we want to store a property into a variable of the same name. You might do that like so:
+
+```js
+const title = book.title;
+```
+
+But you can also do it like this:
+
+```js
+const { title } = book;
+```
+
+It's the exact same thing, but it's just a little bit quicker to write out. It's called _destructuring_.
+
+You can also change the name of the variable when you destructure like so:
+
+```js
+const { title: bookTitle } = book; // same as const bookTitle = book.title
+bookTitle; // => "A Wizard of Earthsea"
+```
+
+---
+
+## Deleting properties
+
+If you would like to remove a property from an object you can use the `delete` keyword:
+
+```js
+const book = {
+  title: 'A Wizard of Earthsea',
+  author: 'Ursula K. LeGuin',
+  isbn: '978-0141354910',
+};
+
+delete book.isbn;
+book; // => { title: "A Wizard of Earthsea", author: "Ursula K. LeGuin" }
+```
+
+---
+
 ## `this`
 
 In JavaScript, `this` is a keyword that refers to the current object. When used in a method on an object, it will always refer to the current object.
@@ -159,6 +209,34 @@ let person = {
 
 person.sayName();
 ```
+
+### Arrow functions
+
+We can also use arrow functions to create methods on objects, however **`this` behaves differently with an arrow function**. For this reason, it is best to not use arrow functions for methods.
+
+---
+
+## Comparing objects
+
+When we compare primitive data types we can use the `===` sign:
+
+```js
+console.log(1 === '1'); // => false
+console.log('a' === 'a'); // => false
+```
+
+However the same is not true for complex data types:
+
+```js
+const book1 = { title: 'A Wizard of Earthsea' };
+const book2 = { title: 'A Wizard of Earthsea' };
+
+console.log(book1 === book2); // => false
+```
+
+This is because when JavaScript compares objects it check whether they are the same object, and not whether they contain the same data. In the example above we created two objects, and as such each live in a different place in memory. When we compared them we asked JavaScript, "are they the same object?"
+
+Imagine two identical cars, they are both black Honda Prius, same engine size, same number of doors, same amount of miles on the clock. Are they the same car? No. They have the same properties, but they are not the same car.
 
 ---
 
@@ -284,3 +362,65 @@ const course = {
 
 ]
 ]
+
+- Easy for humans to read and write
+- Easy for programs to parse and generate
+
+---
+
+## JSON
+
+### JSON is not javascript specific
+
+Used across the web by programs written in many languages
+
+<section class="row">
+  <div>
+    <h4>Ruby</h4>
+    <picture>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="ruby"/>
+    </picture>
+  </div>
+  <div>
+    <h4>Python</h4>
+    <picture>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python"/>
+    </picture>
+  </div>
+  <div>
+    <h4>Rust</h4>
+    <picture>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="rust"/>
+    </picture>
+  </div>
+  <div>
+    <h4>Go</h4>
+    <picture>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="go"/>
+    </picture>
+  </div>
+
+</section>
+
+---
+
+class: code-along
+
+# Code Along
+
+???
+
+Open and complete 04-JSON-codealong to show JSON.parse methods
+
+Highlight that JSON is a string and parse converts the string to an object that can be used by JavaScript
+
+---
+
+class: lab
+
+## Pair/individual activity
+
+- Open `5-json-exercise`
+- Answer the questions in the `app.js`
+
+---

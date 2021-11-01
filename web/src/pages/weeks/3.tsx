@@ -1,44 +1,23 @@
 import Week from '../../components/week';
 
-// const resources = [
-//   [
-//     'CSS Tricks: Complete Guide to Flexbox',
-//     'https://css-tricks.com/snippets/css/a-guide-to-flexbox/',
-//   ],
-//   [
-//     'Scotch: Visual Guide to CSS3 Flexbox',
-//     'https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties',
-//   ],
-//   [
-//     'Interneting is Hard: Flexbox',
-//     'https://internetingishard.com/html-and-css/flexbox/',
-//   ],
-//   [
-//     'MDN: Flexbox',
-//     'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox',
-//   ],
-//   ['Flexbox Froggy 🐸', 'http://flexboxfroggy.com/'],
-//   [
-//     'Detailed CSS positioning',
-//     'http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/',
-//   ],
-//   [
-//     'A List Apart: CSS positioning 101',
-//     'http://alistapart.com/article/css-positioning-101',
-//   ],
-// ];
-
-// const bonuses = [
-//   [
-//     "Complete Code Academy's Learn Git course",
-//     'https://www.codecademy.com/learn/learn-git',
-//   ],
-// ];
+const resources = [
+  [
+    'JavaScript Object Basics',
+    'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics',
+  ],
+  [
+    'Objects - The Modern JavaScript Tutorial',
+    'https://javascript.info/object',
+  ],
+  [
+    'Back To Basics: JavaScript Object Syntax',
+    'https://www.sitepoint.com/back-to-basics-javascript-object-syntax/',
+  ],
+];
 
 const weekConfig = {
-  // bonuses,
   firstLessonTitle: 'Objects and JSON',
-  // resources,
+  resources,
   secondLessonTitle: 'Slack Bot lab 🤖 🧪',
   weekNumber: 3,
   // homeworkPath: '/week-3/lesson-6#27',
