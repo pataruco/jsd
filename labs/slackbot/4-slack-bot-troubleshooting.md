@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Slack bot lab - troubleshooting
+# Slack bot lab 🤖 🧪
 
 ## Bot unresponsive?
 
@@ -28,7 +28,9 @@
 
    If your dyno doesn't wake when you interact with your bot on Slack, go to the command line and issue the following command:
 
-   `heroku ps:restart`
+   ```sh
+   heroku ps:restart
+   ```
 
    Your bot should wake up after a few seconds.
 
