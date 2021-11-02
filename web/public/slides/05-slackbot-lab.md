@@ -23,7 +23,7 @@ class: lab
 # Slack bot 🤖
 
 <h2>
-  <a href="https://github.com/pataruco/jsd/raw/master/labs/objects-json/objects-json-starter-code.zip" class="download-link">
+  <a href="https://github.com/pataruco/jsd/raw/master/labs/slackbot/slackbot-starter-code.zip" class="download-link">
     Download starter code
   </a>
 </h2>
