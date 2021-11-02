@@ -1,113 +1,87 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Slack bot lab - install guide
+# Slack bot lab 🤖 🧪
 
 ## Installing and Configuring Everything
 
 In order to get our bots up and running, we need to perform a number of installations, so make sure you follow these steps carefully.
+
 Your instructor should provide you with a Hubot and an API token; be sure to have those ready because you'll need both in order to complete many of these steps.
 
-1.  First, you'll need to [sign up for a free Heroku account](http://heroku.com).
+1. First, you'll need to [sign up for a free Heroku account](http://heroku.com).
 
-2.  Next, [download and install the Heroku toolbelt](https://toolbelt.heroku.com/). This set of tools allows us to talk to Heroku's servers using the command line.
+2. Next, [download and install the Heroku toolbelt](https://toolbelt.heroku.com/). This set of tools allows us to talk to Heroku's servers using the command line.
 
-    Then, open a terminal window, and type the following commands, in order:
+3. Clone the Jocasta, a Slack bot boilerplate I made for this course
 
-3.  **Create your hubot directory:**
+   ```sh
+   git clone --single-branch --branch starter-code git@github.com:pataruco/jocasta.git
+   ```
 
-    Navigate to your JSD directory, which is the parent directory whose subfolders contain your existing clones of the repos for this course.
+4. Install dependencies
 
-    Then execute the following command to create a new folder named `myhubot`:
+   ```sh
+   yarn
+   ```
 
-    `mkdir myhubot`
+5. Login in Heroku
 
-4.  **Move into that new directory:**
+   ```sh
+   heroku login
+   ```
 
-    `cd myhubot`
+   then enter the email and password you used when setting up your Heroku account.
 
-5.  **Install Hubot and its dependencies (CoffeeScript, Yeoman, and the Hubot generator):**
+   You should see a confirmation that you are logged in, showing your email address.
 
-    `npm install -g hubot coffee-script yo generator-hubot`
+6. Create a new app on Heroku
 
-6.  **Using Yeoman, generate a Hubot bot:**
+   ```sh
+   heroku create myhubotapp
+   ```
 
-        `yo hubot --adapter="slack"`
+   where `myhubotapp` is a unique app name; any app name already used by a heroku user will fail with
 
-        This will prompt you to answer a few questions about your bot:
+   ```sh
+   "Name is already taken."
+   ```
 
-        * Owner: `hit enter`
-        * Bot Name: `Give the bot a name (NO SPACES!)`
-        * Description: `Optional Description`
+   If this happens, just repeat the command with a different app name. (The more unusual the name, the more likely it is to be unique.)
 
-    <!--
-        >Note: the `--adapter="slack"` option in the `yo` command above is a workaround for a dependency-related bug in `generator-hubot` causing the program to crash when it prompts the user for what adapter they want to use. If you specify the adapter on the command line as above, the broken prompting code will be skipped. (This is all documented in [this issue](https://github.com/github/generator-hubot/issues/64) in the `generator-hubot` repo.)
-    -->
+7. Set environment variables in Heroku
 
-7.  **Install hubot-slack dependency and save it to your package.json:**
+   ```sh
+   heroku config:add HEROKU_URL=https://myhubotapp.herokuapp.com
+   ```
 
-    `npm install hubot-slack --save`
+   where `myhubotapp` is the app name you created and used in the previous step
 
-8.  **Edit the `package.json` file**
-    In your `hubot` folder, open the `package.json` file in your editor.
+   ```sh
+   heroku config:add HUBOT_SLACK_TOKEN=YourTokenGoesHere
+   ```
 
-    Near the bottom of the document, locate the line starting with `"node"` and change the numeric value after it to `"6.9.x"`, then save your changes.
+   where `YourTokenGoesHere` is the API token provided by the instructor
 
-    Now we need to push up our bot to Heroku.
+8. Push all your code up to Heroku
 
-9.  **Initialise your local repository:**
+   ```sh
+   git checkout -b master
+   git push heroku master
+   ```
 
-    `git init`
+   Assuming you do not receive an error, proceed to the next step.
 
-10. **Add all of your new files:**
+9. Test your bot locally to make sure it's working:
 
-    `git add .`
+   ```sh
+   ./bin/hubot
+   ```
 
-11. **Commit your new files:**
+   You'll receive a number of messages, including some warnings, which should not be a problem. When the messages stop, press <kbd>Enter</kbd> .
 
-    `git commit -m "Initial Commit"`
+   You should have a Node prompt displaying your bot name.
 
-12. **Create a new app on Heroku:**
+   Press <kbd>control</kbd> + <kbd>C</kbd> when you're done, to return to the BASH prompt.
 
-    `heroku login`
-
-    then enter the email and password you used when setting up your Heroku account.
-
-    You should see a confirmation that you are logged in, showing your email address.
-
-    `heroku create myhubotapp`
-
-    where `myhubotapp` is a unique app name; any app name already used by a heroku user will fail with "Name is already taken."
-
-    If this happens, just repeat the command with a different app name. (The more unusual the name, the more likely it is to be unique.)
-
-    Note that your app name can be different than the local Bot Name you
-    specified in Step 6 above.
-
-13. **Add the following configs for Slack:**
-
-    `heroku config:add HEROKU_URL=https://myhubotapp.herokuapp.com`
-
-    where `myhubotapp` is the app name you created and used in the previous step
-
-    `heroku config:add HUBOT_SLACK_TOKEN=YourTokenGoesHere`
-
-    where `YourTokenGoesHere` is the API token provided by the instructor
-
-14. **Push all your code up to Heroku:**
-
-    `git push heroku master`
-
-    Assuming you do not receive an error, proceed to the next step.
-
-15. **Test your bot locally to make sure it's working:**
-
-    `./bin/hubot`
-
-    You'll receive a number of messages, including some warnings, which should not be a problem. When the messages stop, press Enter.
-
-    You should have a Node prompt displaying your bot name.
-
-    Press `control` + `C` when you're done, to return to the BASH prompt.
-
-16. **Copy the script.js file from your start files:**
+10. Copy the script.js file from your start files:
 
     In Finder, open the start files for today.
 
