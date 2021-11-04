@@ -30,7 +30,13 @@ class: lab
 
 ---
 
-## Homework
+# Homework
+
+<h2>
+  <a href="https://github.com/pataruco/jsd/raw/master/homeworks/week-3/week-3-starter-code.zip" class="download-link">
+    Download starter code
+  </a>
+</h2>
 
 ---
 
@@ -41,5 +47,3 @@ class: frontpage
   <hr/>
   <h1>End of presentation</h1>
 </div>
-
----
