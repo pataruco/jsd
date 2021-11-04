@@ -278,11 +278,15 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 
 ---
 
-## Look ahead to next lesson
+## Homework
 
-### Slackbot lab
+<h3>
+  <a href="https://github.com/pataruco/jsd/raw/master/homeworks/week-2/week-2-starter-code.zip" class="download-link">
+  Instructions
+  </a>
+</h3>
 
-- Building your own Slack Bot! 🤖
+---
 
 class: frontpage
 

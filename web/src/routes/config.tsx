@@ -42,11 +42,29 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-3/lesson-4',
+    component: () => (
+      <>
+        <Title week={3} lesson={4} />
+        <SlidesDeck slidesDeckName="04-objects-json" />
+      </>
+    ),
+  },
+  {
+    path: '/week-3/lesson-5',
+    component: () => (
+      <>
+        <Title week={3} lesson={5} />
+        <SlidesDeck slidesDeckName="05-slackbot-lab" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(2) // Set number of weeks
+export const weeks = new Array(3) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
