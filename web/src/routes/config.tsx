@@ -60,11 +60,20 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-4/lesson-6',
+    component: () => (
+      <>
+        <Title week={4} lesson={6} />
+        <SlidesDeck slidesDeckName="07-the-dom" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(3) // Set number of weeks
+export const weeks = new Array(4) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
