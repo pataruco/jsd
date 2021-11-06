@@ -4,13 +4,13 @@
 
 /* Step 1a
 
-Below the var statement below, add a statement that sets the value of the headingText variable
+Below the let statement below, add a statement that sets the value of the headingText variable
 to reference the element with the ID value "headline"
 (HINT: Use the querySelector() method.)
 
 */
 
-var headingText;
+let headingText;
 // Write your statement below this line:
 headingText = document.querySelector('#headline');
 
@@ -35,25 +35,25 @@ Save your changes, load index.html in your browser, open the console, and verify
 
 /* Step 2a 
 
-Below the var statement below, add a statement that sets the value of the firstItem variable
+Below the let statement below, add a statement that sets the value of the firstItem variable
 to reference the first list item with the class value of "park"
 (HINT: Use the querySelector() method.)
 
 */
 
-var firstItem;
+let firstItem;
 firstItem = document.querySelector('li.park');
 
 /* Step 2b
 
-Below the var statement below, add a statement that sets the value of the firstItemRepeat variable
+Below the let statement below, add a statement that sets the value of the firstItemRepeat variable
 to reference the first list item with the class value of "park". Use the same method (querySelector())
 BUT use a different CSS selector than you did in step 2a above. 
 (HINT: Look at the HTML code to identify other aspects of the code you can use to select the element.)
 
 */
 
-var firstItemRepeat;
+let firstItemRepeat;
 firstItemRepeat = document.querySelector('.parklist li'); // or 'li', 'li.cf', 'ul li', etc.
 
 /* Step 2c
@@ -62,8 +62,8 @@ Write statements that log the firstItem and firstItemRepeat variables to the con
 
 */
 
-console.log(firstItem);
-console.log(firstItemRepeat);
+console.log({ firstItem });
+console.log({ firstItemRepeat });
 
 /* Step 2d
 
@@ -78,25 +78,25 @@ element structure is logged for each of your two console.log() statements above.
 
 /* Step 3a
 
-Below the var statement below, add a statement that sets the value of the parks variable
+Below the let statement below, add a statement that sets the value of the parks variable
 to reference all the list items in the list of parks.
 (HINT: Use the querySelectorAll() method.)
 
 */
 
-var parks;
+let parks;
 parks = document.querySelectorAll('li.park');
 
 /* Step 3b
 
-Below the var statement below, add a statement that sets the value of the parksRepeat variable
+Below the let statement below, add a statement that sets the value of the parksRepeat variable
 to reference all the list items in the list of parks. Use the same method (querySelectorAll())
 BUT use a different CSS selector than you did in step 3a above. 
 (HINT: Look at the HTML code to identify other aspects of the code you can use to select the element.)
 
 */
 
-var parksRepeat;
+let parksRepeat;
 parksRepeat = document.querySelectorAll('.parklist li'); // or 'li', 'li.cf', 'ul li', etc.
 
 /* Step 3c
@@ -105,8 +105,8 @@ Write statements that log the parks and parksRepeat variables to the console.
 
 */
 
-console.log(parks);
-console.log(parksRepeat);
+console.log({ parks });
+console.log({ parksRepeat });
 
 /* Step 3d
 
@@ -129,6 +129,6 @@ HINT: Read about the nth-of-type() CSS selector at https://developer.mozilla.org
 
 */
 
-var thirdItemHeading;
+let thirdItemHeading;
 thirdItemHeading = document.querySelector('li:nth-of-type(3) h2');
 console.log(thirdItemHeading.innerHTML);

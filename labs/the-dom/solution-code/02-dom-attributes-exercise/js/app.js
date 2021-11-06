@@ -30,7 +30,7 @@ Write a statement that sets the class value of the element referenced by firstIt
 
 */
 
-// firstItem.className = 'highlight';
+firstItem.className = 'highlight';
 
 /* Step 1d
 
@@ -79,7 +79,7 @@ Write a statement that removes the class value you set in Step 2a.
 
 */
 
-// firstItem.classList.remove('hidden');
+firstItem.classList.remove('hidden');
 
 /* Step 2e
 
@@ -110,8 +110,8 @@ Write statements to do the following:
 
 */
 
-/* let items;
+let items;
 items = document.querySelectorAll('li');
-items.forEach(function(el) {
-    el.classList.add('hidden');
-}); */
+items.forEach(function (el) {
+  el.classList.add('hidden');
+});

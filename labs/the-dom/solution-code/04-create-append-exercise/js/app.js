@@ -1,4 +1,4 @@
-/* 
+/*
 Use DOM manipulation to create the sidebar elements (heading and paragraphs) and text content shown in the preview.png image,
 and then append them to the DOM.
 
