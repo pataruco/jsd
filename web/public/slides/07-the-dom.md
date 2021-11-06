@@ -458,6 +458,8 @@ class: code-along
 
 # Code along
 
+Download [labs](https://github.com/pataruco/jsd/raw/master/labs/the-dom/the-dom-starter-code.zip)
+
 ???
 
 OPEN 00-dom-codealong
