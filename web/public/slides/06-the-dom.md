@@ -16,6 +16,208 @@ class: frontpage
 
 ---
 
+## The Document Object Model (DOM)
+
+JavaScript interacts with our HTML document. It can read info on the page and make changes to any element on the page.
+
+To learn how to do this we need a common language to describe the construction of the document and the elements within it.
+
+**The Document Object Model** is a representation of the page used by JavaScript to interact with all the elements.
+
+We can visualise the DOM as a tree like structure of each element and their heirarchy. But the DOM is more than just a representation of the HTML. Each element on the page is an object that has certain characteristics and can perform certain actions.
+
+The document is an object and has a method for finding elements within it. Those elements are also objects which have properties like their style or inner text content. Elements also have methods for actions like getting, setting or removing attributes.
+
+---
+
+## DOM tree
+
+A DOM tree is a kind of tree whose nodes represent an HTML document contents. Each HTML document has a unique DOM tree representation. For example, the following document:
+
+.row[
+
+```html
+<html>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
+</html>
+```
+
+<div>
+
+Has a DOM tree that looks like this:
+
+  <picture>
+    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/01/29/17084/3d1185f6bd10a5e25fe475a50ebca710/dom-string.png" alt="DOM tree">
+  </picture>
+
+</div>
+
+]
+
+---
+
+## The DOM
+
+A Webpage Is Just a Bunch of Objects
+
+.image-third[
+![The DOM](https://pataruco.s3.amazonaws.com/ga/fewd/dom-optimised.svg)
+]
+
+Everything you see in the browser is represented as an object in JS
+
+---
+
+## DOM Three Big Objects
+
+.row[
+.column[
+
+### Window
+
+The whole web browser; mostly used for browser-level settings like the current url. All global variables are stored here too.
+]
+.column[
+
+### Document
+
+The current webpage. This object has the functionality we want to use when accessing elements (other objects) on the page.
+]
+.column[
+
+### Console
+
+A scratch pad for development-related messages; highly useful in debugging.
+
+]
+]
+
+---
+
+## The DOM
+
+Browsers read your HTML and create an object in the computer's memory for each part.
+The Document Object Model (DOM) is the browser's JavaScript representation of your HTML elements.
+
+### Getters and Setters
+
+The main thing we're doing with JS is getting objects from the DOM and performing actions with them (moving, hiding, updating text, changing attributes etc).
+
+The methods that get something from a webpage are called **getters**.
+
+The methods that change something on the webpage are called **setters**.
+
+---
+
+## The DOM
+
+### Methods
+
+Getters and setters access and modify objects. They are both types of methods. **Methods** belong to JavaScript objects, including DOM elements.
+
+Think of methods as the functions that an object can use. A guitar, for example, might have the following methods:
+
+- `playChord(chord)`
+- `playNote(note)`
+- `changeTempo(tempo)`
+- `changeVolume(volume)`
+
+---
+
+## The DOM
+
+### Properties
+
+Objects contain data as well as methods — information that describes the object (height, width, classes, etc). These pieces of information are called **properties**.
+
+| Property                  | Description                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------ |
+| `someElement.classList`   | A list of the classes belonging to a DOM element.                                          |
+| `someElement.id`          | The ID of an element, if it has one.                                                       |
+| `someElement.style.color` | The color of an element's text.                                                            |
+| `window.location.href`    | The window object's location details, including the page's href (hypertext reference/URL). |
+
+---
+
+## The DOM
+
+### Getters
+
+```javascript
+const gaData = document.getElementById('ga');
+//             |______| |____________| |___|
+//                 |           |         |
+//              Object      Method    Parameter
+//                    (a getter method)
+```
+
+Once you get something from the DOM, you can use a variable to store it in memory for future manipulation.
+
+```javascript
+const gaData = document.getElementById('ga');
+```
+
+Now that we have our element, gaData, we can access its properties:
+
+```javascript
+gaData.style.color;
+gaData.innerText;
+gaData.classList;
+```
+
+---
+
+## The DOM
+
+### Manipulating an Element's Classes
+
+We're mostly going to manipulate classes to make things happen on our pages.
+
+```javascript
+    gaData.classList.toggle('show');
+/*  |____| |_______| |____| |____|
+//     |        |       |      |
+//  Object   Property   |   Class name
+//                      |
+//                    Method
+//              (a getter method)
+```
+
+---
+
+## The DOM
+
+### Manipulating an Element's Classes
+
+There are multiple class related properties and methods relating to classes in JS
+
+```javascript
+const gaData = document.getElementById('ga');
+
+// gives us the current value of the class attribute
+gaData.className;
+
+// add a class to the element
+gaData.classList.add('new-class');
+
+// remove the class
+gaData.classList.remove('new-class');
+
+// true/false
+gaData.classList.contains('new-class');
+
+// add the class if it's not present, remove it if it is
+gaData.classList.toggle('new-class');
+```
+
+---
+
 ## The DOM
 
 .row[

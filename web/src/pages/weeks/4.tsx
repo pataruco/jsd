@@ -8,7 +8,7 @@ const weekConfig = {
   // resources,
   weekNumber: 4,
   firstLessonTitle: 'The DOM',
-  secondLessonTitle: 'Events',
+  secondLessonTitle: 'DOM Events',
   homeworkPath: '/week-4/lesson-6#30',
   // bonuses,
 };

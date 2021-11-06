@@ -65,7 +65,16 @@ export const lessonRoutes = [
     component: () => (
       <>
         <Title week={4} lesson={6} />
-        <SlidesDeck slidesDeckName="07-the-dom" />
+        <SlidesDeck slidesDeckName="06-the-dom" />
+      </>
+    ),
+  },
+  {
+    path: '/week-4/lesson-7',
+    component: () => (
+      <>
+        <Title week={4} lesson={7} />
+        <SlidesDeck slidesDeckName="07-dom-events" />
       </>
     ),
   },
