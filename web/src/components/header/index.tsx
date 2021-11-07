@@ -134,6 +134,7 @@ export const Weeks: React.FC = () => {
 export const bonusLessons = [
   ['Installfest macOS', '/bonus-lessons/installfest-macos'],
   ['Installfest Windows', '/bonus-lessons/installfest-windows'],
+  ['jQuery', '/bonus-lessons/jquery'],
 ];
 
 const BonusLessons: React.FC = () => {

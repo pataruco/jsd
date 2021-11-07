@@ -10,7 +10,7 @@ const Weeks = [
   'Installfest, The Command Line & Data Types',
   'Arrays, Loops, Conditionals & Functions',
   'Objects & JSON, Slack bot lab 🤖 🧪',
-  // 'Slackbot Lab & The DOM & jQuery',
+  'The DOM',
   // 'JavaScript Events, AJAX & APIs',
   // 'Asynchronous JavaScript, Callbacks & Advanced APIs',
   // 'APIs Lab & Prototypal Inheritance',

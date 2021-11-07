@@ -60,11 +60,29 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-4/lesson-6',
+    component: () => (
+      <>
+        <Title week={4} lesson={6} />
+        <SlidesDeck slidesDeckName="06-the-dom" />
+      </>
+    ),
+  },
+  {
+    path: '/week-4/lesson-7',
+    component: () => (
+      <>
+        <Title week={4} lesson={7} />
+        <SlidesDeck slidesDeckName="07-dom-events" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(3) // Set number of weeks
+export const weeks = new Array(4) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
@@ -101,6 +119,15 @@ export const bonusLessonRoutes = [
       <>
         <Title title="Bonus Lesson | Installfest Windows" />
         <SlidesDeck slidesDeckName="bonus-lesson-installfest-windows" />
+      </>
+    ),
+  },
+  {
+    path: '/bonus-lessons/jquery',
+    component: () => (
+      <>
+        <Title title="Bonus Lesson | jQuery" />
+        <SlidesDeck slidesDeckName="bonus-lesson-jquery" />
       </>
     ),
   },
