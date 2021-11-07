@@ -885,5 +885,3 @@ class: frontpage
   <hr/>
   <h1>End of presentation</h1>
 </div>
-
----

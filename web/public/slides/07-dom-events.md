@@ -90,3 +90,97 @@ function sayHello() {
 ```
 
 ---
+
+class: code-along
+
+# Code along
+
+???
+
+Open `00-events-codealong`
+
+---
+
+class: lab
+
+## Individual activity
+
+- Download lab
+- Open `01-events-exercise`
+- Add event listeners to the 3 buttons at the top of the page.
+- Clicking each button should hide the block below it with the corresponding colour.
+- Use the handouts in slack as a guide for syntax.
+
+---
+
+## Event Object
+
+- The event object contains information about the triggering event
+- It is passed to a function through a parameter
+- The parameter is usually called `event`, or simply `e`
+
+```js
+const addButton = document.querySelector('button.add');
+
+addButton.addEventListener('click', (event) => {
+  console.log(event);
+});
+```
+
+---
+
+class: code-along
+
+# Code along
+
+???
+
+Open `02-event-codealong` - get them to adapt the solution to use events to prevent default and perhaps refactor to 1 function
+
+---
+
+class: lab
+
+## Individual activity
+
+- Open `03-event-object—exercise`
+- Update the code to prevent the form from submitting when the button is clicked.
+- Test your code in the browser and check that the form is not being submitted and causing a full page reload.
+
+---
+
+class: lab
+
+## Individual/pair activity
+
+### Color switcher
+
+---
+
+class: lab
+
+## Individual/pair activity
+
+### Traffic lights
+
+---
+
+class: lab
+
+## Bonus Lab
+
+### Sound board
+
+---
+
+## Homework
+
+---
+
+class: frontpage
+
+<div>
+  <h2>JavaScript Development</h2>
+  <hr/>
+  <h1>07 DOM Events</h1>
+</div>
