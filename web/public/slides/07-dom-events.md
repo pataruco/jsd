@@ -105,7 +105,7 @@ class: lab
 
 ## Individual activity
 
-- Download lab
+- Download [labs](https://github.com/pataruco/jsd/raw/master/labs/events/events-starter-code.zip) 🧪
 - Open `01-events-exercise`
 - Add event listeners to the 3 buttons at the top of the page.
 - Clicking each button should hide the block below it with the corresponding colour.
@@ -165,15 +165,9 @@ class: lab
 
 ---
 
-class: lab
-
-## Bonus Lab
-
-### Sound board
-
----
-
 ## Homework
+
+Download [drumkit lab](https://github.com/pataruco/jsd/raw/master/homeworks/week-4/week-4-starter-code.zip)
 
 ---
 
