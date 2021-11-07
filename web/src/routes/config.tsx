@@ -122,6 +122,15 @@ export const bonusLessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/bonus-lessons/jquery',
+    component: () => (
+      <>
+        <Title title="Bonus Lesson | jQuery" />
+        <SlidesDeck slidesDeckName="bonus-lesson-jquery" />
+      </>
+    ),
+  },
 ];
 
 // Final project

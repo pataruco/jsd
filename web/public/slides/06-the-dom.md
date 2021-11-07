@@ -874,10 +874,6 @@ class: lab
 
 ---
 
-## Homework
-
----
-
 class: frontpage
 
 <div>
