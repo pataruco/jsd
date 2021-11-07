@@ -153,7 +153,8 @@ class: lab
 
 ## Individual/pair activity
 
-### Color switcher
+- Open `04-color-switcher` 🧪
+- Follow the instructions from the `readme.md` file
 
 ---
 
@@ -161,7 +162,8 @@ class: lab
 
 ## Individual/pair activity
 
-### Traffic lights
+- Open `05-traffic-lights` 🚦
+- Follow the instructions from the `readme.md` file
 
 ---
 
