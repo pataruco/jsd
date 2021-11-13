@@ -3,14 +3,12 @@ import SlidesDeck from '../components/slides-deck';
 import Title from '../components/title';
 import Loading from '../pages/loading';
 
-// TODO: useRoutes https://reactrouter.com/docs/en/v6/upgrading/v5#use-useroutes-instead-of-react-router-config
-
 // Lessons
 // Path: week-n/lesson-n
 export const lessonRoutes = [
   {
     path: '/week-1/lesson-0',
-    component: () => (
+    element: () => (
       <>
         <Title week={1} lesson={0} />
         <SlidesDeck slidesDeckName="00-installfest" />
@@ -19,7 +17,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-1/lesson-1',
-    component: () => (
+    element: () => (
       <>
         <Title week={1} lesson={1} />
         <SlidesDeck slidesDeckName="01-the-command-line-data-types" />
@@ -28,7 +26,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-2/lesson-2',
-    component: () => (
+    element: () => (
       <>
         <Title week={2} lesson={2} />
         <SlidesDeck slidesDeckName="02-arrays-loops" />
@@ -37,7 +35,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-2/lesson-3',
-    component: () => (
+    element: () => (
       <>
         <Title week={2} lesson={3} />
         <SlidesDeck slidesDeckName="03-conditionals-functions" />
@@ -46,7 +44,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-3/lesson-4',
-    component: () => (
+    element: () => (
       <>
         <Title week={3} lesson={4} />
         <SlidesDeck slidesDeckName="04-objects-json" />
@@ -55,7 +53,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-3/lesson-5',
-    component: () => (
+    element: () => (
       <>
         <Title week={3} lesson={5} />
         <SlidesDeck slidesDeckName="05-slackbot-lab" />
@@ -64,7 +62,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-4/lesson-6',
-    component: () => (
+    element: () => (
       <>
         <Title week={4} lesson={6} />
         <SlidesDeck slidesDeckName="06-the-dom" />
@@ -73,7 +71,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-4/lesson-7',
-    component: () => (
+    element: () => (
       <>
         <Title week={4} lesson={7} />
         <SlidesDeck slidesDeckName="07-dom-events" />
@@ -90,7 +88,7 @@ export const weeks = new Array(4) // Set number of weeks
 
 export const weekRoutes = weeks.map((weekNumber) => ({
   path: `/week-${weekNumber}`,
-  component: () => {
+  element: () => {
     const Content = lazy(() => import(`../pages/weeks/${weekNumber}`));
     return (
       <>
@@ -108,7 +106,7 @@ export const weekRoutes = weeks.map((weekNumber) => ({
 export const bonusLessonRoutes = [
   {
     path: '/bonus-lessons/installfest-macos',
-    component: () => (
+    element: () => (
       <>
         <Title title="Bonus Lesson | Installfest macOS" />
         <SlidesDeck slidesDeckName="bonus-lesson-installfest-macos" />
@@ -117,7 +115,7 @@ export const bonusLessonRoutes = [
   },
   {
     path: '/bonus-lessons/installfest-windows',
-    component: () => (
+    element: () => (
       <>
         <Title title="Bonus Lesson | Installfest Windows" />
         <SlidesDeck slidesDeckName="bonus-lesson-installfest-windows" />
@@ -126,7 +124,7 @@ export const bonusLessonRoutes = [
   },
   {
     path: '/bonus-lessons/jquery',
-    component: () => (
+    element: () => (
       <>
         <Title title="Bonus Lesson | jQuery" />
         <SlidesDeck slidesDeckName="bonus-lesson-jquery" />
@@ -139,7 +137,7 @@ export const bonusLessonRoutes = [
 // Path: /final-project-brief
 export const FinalProjectRoute = {
   path: '/final-project-brief',
-  component: () => {
+  element: () => {
     const Content = lazy(() => import('../pages/final-project-brief'));
     return (
       <>
@@ -156,7 +154,7 @@ export const FinalProjectRoute = {
 // Path: //bonus-lessons
 export const BonusLessonsRoute = {
   path: '/bonus-lessons',
-  component: () => {
+  element: () => {
     const Content = lazy(() => import('../pages/bonus-lessons'));
     return (
       <>
