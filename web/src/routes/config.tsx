@@ -3,6 +3,8 @@ import SlidesDeck from '../components/slides-deck';
 import Title from '../components/title';
 import Loading from '../pages/loading';
 
+// TODO: useRoutes https://reactrouter.com/docs/en/v6/upgrading/v5#use-useroutes-instead-of-react-router-config
+
 // Lessons
 // Path: week-n/lesson-n
 export const lessonRoutes = [

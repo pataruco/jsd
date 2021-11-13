@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   closeBonusLessonMenu,
@@ -220,4 +220,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default withRouter(Header);
+export default Header;
