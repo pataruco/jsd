@@ -1,6 +1,5 @@
-import React from 'react';
-import { createBrowserHistory } from 'history';
-import { Switch, Route, Router } from 'react-router-dom';
+// import { createBrowserHistory } from 'history';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../pages/home';
 import {
   lessonRoutes,
@@ -13,42 +12,46 @@ import ErrorPage from '../pages/404';
 import '../styles/site-index.scss';
 import About from '../pages/about';
 
-export const history = createBrowserHistory();
+// export const history = createBrowserHistory();
 
-const CustomBrowserRouter: React.FC = ({ children }) => (
-  <Router history={history}>{children}</Router>
+// const CustomBrowserRouter: React.FC = ({ children }) => (
+//   <BrowserRouter history={history}>{children}</BrowserRouter>
+// );
+
+const LessonsRouteComponents = lessonRoutes.map(
+  ({ path, component: Component }, key) => (
+    <Route path={path} element={<Component />} key={key} />
+  ),
 );
 
-const LessonsRouteComponents = lessonRoutes.map(({ path, component }, key) => (
-  <Route exact path={path} component={component} key={key} />
-));
-
-const WeekRouteComponents = weekRoutes.map(({ path, component }, key) => (
-  <Route exact path={path} component={component} key={key} />
-));
+const WeekRouteComponents = weekRoutes.map(
+  ({ path, component: Component }, key) => (
+    <Route path={path} element={<Component />} key={key} />
+  ),
+);
 
 const BonusLessonsComponents = bonusLessonRoutes.map(
-  ({ path, component }, key) => (
-    <Route exact path={path} component={component} key={key} />
+  ({ path, component: Component }, key) => (
+    <Route path={path} element={<Component />} key={key} />
   ),
 );
 
 const { path: finalProjectRoute, component: FinalProject } = FinalProjectRoute;
 const { path: bonusLessonsRoute, component: BonusLessons } = BonusLessonsRoute;
 
-const Routes = () => (
-  <CustomBrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path={finalProjectRoute} component={FinalProject} />
-      <Route exact path={bonusLessonsRoute} component={BonusLessons} />
+const Router = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path={finalProjectRoute} element={<FinalProject />} />
+      <Route path={bonusLessonsRoute} element={<BonusLessons />} />
       {WeekRouteComponents}
       {BonusLessonsComponents}
       {LessonsRouteComponents}
-      <Route path="/*" component={ErrorPage} />
-    </Switch>
-  </CustomBrowserRouter>
+      <Route path="/*" element={<ErrorPage />} />
+    </Routes>
+  </BrowserRouter>
 );
 
-export default Routes;
+export default Router;

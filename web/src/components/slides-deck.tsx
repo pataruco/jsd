@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import '../styles/slide-index.scss';
-import { useHistory } from 'react-router-dom';
 const { PUBLIC_URL } = process.env;
 
 interface SlidesDeckProps {
@@ -23,6 +22,11 @@ interface Slide {
 
 const slideNavigationClass = 'slide-navigation';
 
+const deleteSlideNavigation = () =>
+  document
+    .querySelectorAll(`.${slideNavigationClass}`)
+    .forEach((anchor) => anchor.remove());
+
 const getAnchorProps = (pathname: string) => {
   const pageToNavigate = pathname.split('/')[1];
   const [firstWord, secondWord] = pageToNavigate.split('-');
@@ -32,10 +36,8 @@ const getAnchorProps = (pathname: string) => {
   };
 };
 
-const createAnchor = (history: History['state']) => {
-  const {
-    location: { pathname },
-  } = history;
+const createAnchor = () => {
+  const { pathname } = window.location;
 
   const { pageToNavigate, text } = getAnchorProps(pathname);
 
@@ -47,30 +49,18 @@ const createAnchor = (history: History['state']) => {
   return anchor;
 };
 
-const deleteSlideNavigation = () =>
-  document
-    .querySelectorAll(`.${slideNavigationClass}`)
-    .forEach((anchor) => anchor.remove());
-
-interface CreateSlideNavigation {
-  slide: Slide;
-  history: History['state'];
-}
-
-const createSlideNavigation = ({ slide, history }: CreateSlideNavigation) => {
+const createSlideNavigation = (slide: Slide) => {
   const slideIndex = slide.getSlideIndex();
 
   const slideElements = document.querySelectorAll('.remark-slide-content');
   deleteSlideNavigation();
   if (slideElements) {
-    const anchor = createAnchor(history);
+    const anchor = createAnchor();
     slideElements[slideIndex].appendChild(anchor);
   }
 };
 
 const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckName }) => {
-  const history = useHistory();
-
   useEffect(() => {
     // @ts-ignore
     const slides = remark.create({
@@ -92,9 +82,9 @@ const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckName }) => {
     // listening on slide show
     slides.on('showSlide', (slide: Slide) =>
       // Injecting navigation to menu
-      createSlideNavigation({ slide, history }),
+      createSlideNavigation(slide),
     );
-  }, [slidesDeckName, history]);
+  }, [slidesDeckName]);
 
   return null;
 };
