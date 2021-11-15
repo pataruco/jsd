@@ -78,11 +78,20 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-5/lesson-8',
+    element: () => (
+      <>
+        <Title week={5} lesson={8} />
+        <SlidesDeck slidesDeckName="08-asynchronous-javascript" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(4) // Set number of weeks
+export const weeks = new Array(5) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
