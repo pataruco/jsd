@@ -87,6 +87,15 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-5/lesson-9',
+    element: () => (
+      <>
+        <Title week={5} lesson={9} />
+        <SlidesDeck slidesDeckName="09-advanced-apis" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
