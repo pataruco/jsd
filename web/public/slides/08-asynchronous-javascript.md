@@ -220,7 +220,7 @@ class: code-along
 
 # Code along
 
-Downloand [labs]()
+Downloand [labs](https://github.com/pataruco/jsd/raw/master/labs/async-callbacks/async-callbacks-starter-code.zip)
 
 ???
 
@@ -462,5 +462,3 @@ class: frontpage
   <hr/>
   <h1>End of presentation</h1>
 </div>
-
----
