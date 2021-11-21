@@ -40,6 +40,7 @@ const weekConfig = {
   firstLessonTitle: 'Asynchronous programming',
   secondLessonTitle: 'TfL API Lab 🚇 🧪',
   weekNumber: 5,
+  homeworkPath: '/week-5/lesson-9#7',
 };
 
 const Week5 = () => <Week {...weekConfig} />;

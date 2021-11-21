@@ -21,7 +21,7 @@ class: code-along
 
 # Code along
 
-Downloand [labs]()
+Downloand [labs](https://github.com/pataruco/jsd/raw/master/labs/tfl-google-map/tfl-google-map-starter-code.zip)
 
 ???
 
@@ -69,6 +69,12 @@ class: lab
 4. Add another line to the InfoWindow showing the number of available bikes as a percentage of the total number of Bikes. round this percentage to the nearest whole number: e.g: Bike Availability: 23%
 
 **BONUS**: Read the Google Maps docs on custom markers and add custom markers of your own (https://developers.google.com/maps/documentation/javascript/custom-markers) HINT: If you image size is too large, try using the scaled size property (https://stackoverflow.com/questions/15096461/resize-google-maps-marker-icon-image)
+
+---
+
+# Homework
+
+[Download](https://github.com/pataruco/jsd/raw/master/homeworks/week-5/week-5-starter-code.zip)
 
 ---
 
