@@ -8,3 +8,7 @@ body {
   height: 100vh;
   background: grey;
 }
+
+.bike {
+  width: 200px;
+}

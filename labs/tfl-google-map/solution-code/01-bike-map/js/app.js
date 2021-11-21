@@ -57,12 +57,12 @@ const createInfoWindow = ({ marker, bikeData }) => {
 };
 
 const renderBike = (bikeData) => {
-  const icon = {
-    url: 'images/blue-marker.jpg',
-    scaledSize: new google.maps.Size(32, 32),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(0, 0),
-  };
+  // const icon = {
+  //   url: 'images/blue-marker.jpg',
+  //   scaledSize: new google.maps.Size(32, 32),
+  //   origin: new google.maps.Point(0, 0),
+  //   anchor: new google.maps.Point(0, 0),
+  // };
 
   const { lat, lon: lng } = bikeData;
 
