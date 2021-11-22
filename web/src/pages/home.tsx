@@ -11,7 +11,7 @@ const Weeks = [
   'Arrays, Loops, Conditionals & Functions',
   'Objects & JSON, Slack bot lab 🤖 🧪',
   'The DOM',
-  // 'JavaScript Events, AJAX & APIs',
+  'Asynchronous programming & TfL API Lab 🚇 🧪',
   // 'Asynchronous JavaScript, Callbacks & Advanced APIs',
   // 'APIs Lab & Prototypal Inheritance',
   // 'Closures, this & Intro to CRUD and Firebase Lab',
