@@ -96,11 +96,29 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-6/lesson-10',
+    element: () => (
+      <>
+        <Title week={6} lesson={10} />
+        <SlidesDeck slidesDeckName="10-advanced-apis-lab" />
+      </>
+    ),
+  },
+  {
+    path: '/week-6/lesson-11',
+    element: () => (
+      <>
+        <Title week={6} lesson={11} />
+        <SlidesDeck slidesDeckName="11-functions-filters" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(5) // Set number of weeks
+export const weeks = new Array(6) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
