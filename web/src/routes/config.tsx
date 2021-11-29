@@ -101,7 +101,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={6} lesson={10} />
-        <SlidesDeck slidesDeckName="10-advanced-apis-lab" />
+        <SlidesDeck slidesDeckName="10-templating-lab" />
       </>
     ),
   },

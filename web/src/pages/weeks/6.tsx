@@ -40,7 +40,7 @@ import Week from '../../components/week';
 // ];
 
 const weekConfig = {
-  firstLessonTitle: 'Advanced API lab 🧪',
+  firstLessonTitle: 'Templating lab 🧪',
   // resources,
   secondLessonTitle: 'Filters & Functions',
   weekNumber: 6,
