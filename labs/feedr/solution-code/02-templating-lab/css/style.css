@@ -1,14 +1,11 @@
 body {
-  background: url('../img/food.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('../img/food.jpg') no-repeat center center fixed;
   background-size: cover;
   padding-top: 12em;
 }
 
 .container {
-  background-color: rgba(100,170,76,0.7);
+  background-color: rgba(100, 170, 76, 0.7);
   padding: 2em;
 }
 
@@ -23,12 +20,12 @@ h1 {
 }
 
 .recipe {
-  background: #E0F8E0;
+  background: #e0f8e0;
   padding: 0.5em;
   font: 1em Arial, Helvetica, sans-serif;
   margin-bottom: 1em;
 }
 
-.recipe div span:first-child {
+.recipe .label {
   font-weight: bold;
 }

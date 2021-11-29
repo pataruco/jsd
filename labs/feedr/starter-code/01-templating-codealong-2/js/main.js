@@ -1,3 +1,6 @@
+const sessionsElement = document.querySelector('.sessions');
+const sessionTemplate = document.querySelector('template');
+
 const sessions = [
   {
     title: 'Advances in Wasp Farming',
