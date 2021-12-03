@@ -55,6 +55,25 @@ const favourites = [
   },
 ];
 
+const renderRecipeAsStringLiteral = (recipe) => {
+  const { name, serves, meal } = recipe;
+
+  const dlElement = document.createElement('dl');
+
+  dlElement.classList.add('recipe');
+
+  dlElement.innerHTML = `
+<dt class="label">Name:</dt>
+<dd>${name}</dd>
+<dt class="label">Serves:</dt>
+<dd>${serves}</dd>
+<dt class="label">Meal:</dt>
+<dd>${meal}</dd>`;
+
+  recipesElement.appendChild(dlElement);
+};
+
 favourites.forEach((recipe) => {
-  renderRecipe(recipe);
+  // renderRecipe(recipe);
+  renderRecipeAsStringLiteral(recipe);
 });

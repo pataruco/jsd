@@ -23,10 +23,32 @@ const renderSession = (session) => {
   titleElement.innerText = title;
   dateTimeElement.innerText = `${day}: ${start} - ${end}`;
   presenterElement.innerText = presenter;
-  presenterElement.innerText = presenter;
   summaryElement.innerText = summary;
 
   sessionsElement.appendChild(sessionClone);
 };
 
-renderSession(sessions);
+// renderSession(sessions);
+
+// Another solution
+
+const renderSessionUsingTemplateLiterals = (session) => {
+  const { title, presenter, day, start, end, summary } = session;
+
+  const articleElement = document.createElement('article');
+
+  articleElement.innerHTML = `
+<h2 class="title">${title}</h2>
+<dl>
+  <dt class="label">Time:</dt>
+  <dd>${day}: ${start} - ${end}</dd>
+  <dt class="label">Presenter:</dt>
+  <dd>${presenter}</dd>
+</dl>
+<p>${summary}</p>
+  `;
+
+  sessionsElement.appendChild(articleElement);
+};
+
+renderSessionUsingTemplateLiterals(sessions);
