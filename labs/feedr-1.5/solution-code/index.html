@@ -21,25 +21,21 @@
 
   <body>
     <header>
-      <section class="container">
+      <div class="container">
         <h1>Feedr</h1>
         <nav>
           <ul>
-            <li>
-              <a href="#">News Source: <span>Mashable</span></a>
-              <ul>
-                <li><a href="#">Mashable</a></li>
-                <li><a href="#">Reddit</a></li>
-                <li><a href="#">Digg</a></li>
-              </ul>
-            </li>
+            <li><button type="button">Mashable</button></li>
+            <li><button type="button">Reddit</button></li>
+            <li><button type="button">Digg</button></li>
           </ul>
-          <section id="search" class="search">
-            <input type="text" name="name" value="" />
-            <a href="#"><img src="images/search.png" alt="" /></a>
-          </section>
         </nav>
-      </section>
+        <form>
+          <label for="search" class="hidden">Search</label>
+          <input type="search" name="search" id="search" />
+          <button type="submit">search</button>
+        </form>
+      </div>
     </header>
 
     <main class="container">
@@ -66,12 +62,12 @@
       </article>
     </main>
 
-    <div class="pop-up">
+    <div class="pop-up hidden">
       <button href="#" class="close-popup">close</button>
       <div class="container">
         <h2>Article title here</h2>
         <p>Article description/content here.</p>
-        <a href="#" class="pop-up-action" target="_blank"
+        <a href="#" class="pop-up-action" target="_blank" rel="noopener"
           >Read more from source</a
         >
       </div>
