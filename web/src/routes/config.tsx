@@ -110,7 +110,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={6} lesson={11} />
-        <SlidesDeck slidesDeckName="11-functions-filters" />
+        <SlidesDeck slidesDeckName="11-feedr-lab" />
       </>
     ),
   },
