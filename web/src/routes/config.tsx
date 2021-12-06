@@ -114,11 +114,20 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-7/lesson-12',
+    element: () => (
+      <>
+        <Title week={7} lesson={12} />
+        <SlidesDeck slidesDeckName="12-intro-to-firebase-and-crud" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(6) // Set number of weeks
+export const weeks = new Array(7) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
