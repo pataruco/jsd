@@ -1,4 +1,3 @@
-import React from 'react';
 import Week from '../../components/week';
 
 const resources = [
@@ -7,43 +6,19 @@ const resources = [
     'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures',
   ],
   [
-    'MDN: Expressions and operators',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators',
+    "A beginner's guide to HTTP and REST",
+    'http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340',
   ],
   [
-    'MDN: Arithmetic operators',
-    'https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators',
-  ],
-  [
-    'MDN: Working with objects',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects',
-  ],
-  [
-    'MDN: Array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
-  ],
-  [
-    'MDN: Equality comparisons and sameness',
-    'https://developer.mozilla.org/en/docs/Web/JavaScript/Equality_comparisons_and_sameness',
-  ],
-  [
-    'JavaScript equality table',
-    'https://dorey.github.io/JavaScript-Equality-Table/',
-  ],
-  [
-    'MDN: Logical operators',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators',
-  ],
-  [
-    'Tuts+: What is type coercion?',
-    'http://code.tutsplus.com/articles/the-beginners-guide-to-type-coercion-what-is-coercion--cms-21917',
+    'Async JS Callbacks',
+    'http://sporto.github.io/blog/2012/12/09/callbacks-listeners-promises/',
   ],
 ];
 
 const weekConfig = {
-  firstLessonTitle: 'Conditional statements',
+  firstLessonTitle: 'Templating lab 🧪',
   resources,
-  secondLessonTitle: 'Arrays and loops',
+  secondLessonTitle: 'Feedr Lab',
   weekNumber: 6,
 };
 
