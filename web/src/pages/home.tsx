@@ -12,7 +12,7 @@ const Weeks = [
   'Objects & JSON, Slack bot lab 🤖 🧪',
   'The DOM',
   'Asynchronous programming & TfL API Lab 🚇 🧪',
-  'Advanced APIs',
+  'Template and Feedr Lab 🧪',
   // 'APIs Lab & Prototypal Inheritance',
   // 'Closures, this & Intro to CRUD and Firebase Lab',
   // 'Deploying Your App & Student Choice',
