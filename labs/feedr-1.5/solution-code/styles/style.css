@@ -61,7 +61,18 @@ header ul {
   justify-content: space-between;
 }
 
-header ul li button[type='button'],
+header form select {
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  padding: 0.15em 0.25em;
+}
+
+header form select:focus {
+  background-color: var(--light-grey);
+  border: 2px solid var(--light-grey);
+}
+
 header form button[type='submit'] {
   appearance: none;
   color: var(--black);
@@ -78,8 +89,6 @@ header form input[type='search'] {
   padding: 0.15em 0.25em;
 }
 
-header ul li button[type='button']:hover,
-header ul li button[type='button']:focus,
 header form button[type='submit']:hover,
 header form button[type='submit']:focus,
 header form input[type='search']:hover,
@@ -88,7 +97,6 @@ header form input[type='search']:focus {
   border: 2px solid var(--light-grey);
 }
 
-header ul li button[type='button']:active,
 header form button[type='submit']:active,
 header form input[type='search']:active {
   color: var(--white);
