@@ -11,3 +11,21 @@ export const fetchRickAndMorty = async () => {
     throw new Error(error);
   }
 };
+
+export const createRickAndMortyArticles = (characters) => {
+  const articles = characters.map((character) => {
+    const { name, species, image, episode, origin, gender, status } = character;
+
+    console.log({ name, species, image, episode, origin, gender, status });
+
+    return {
+      title: name,
+      subTitle: species,
+      image,
+      ranking: episode.length,
+      description: `Gender: ${gender}, Status: ${status}, Origin: ${origin.name}`,
+      externalUrl: '',
+    };
+  });
+  return articles;
+};
