@@ -1,7 +1,21 @@
 const mainElement = document.querySelector('#js-main');
+const popUpElement = document.querySelector('#js-pop-up');
+const popUpContentElement = document.querySelector('#js-pop-up-content');
+const closePopUpButton = document.querySelector('#js-close-pop-up-button');
 
-const showFullArticle = (event) => {
-  console.log('hit');
+const showFullArticle = (article) => {
+  const { title, description, externalUrl } = article;
+
+  popUpContentElement.innerHTML = '';
+
+  popUpContentElement.innerHTML = `
+    <h2>${title}</h2>
+    <p>${description}</p>
+    <a href="${externalUrl}" class="pop-up-action" target="_blank" rel="noopener"
+      >Read more from source</a
+    > `;
+
+  popUpElement.classList.remove('hidden');
 };
 
 export const clearArticles = () => {
@@ -9,7 +23,7 @@ export const clearArticles = () => {
 };
 
 export const renderArticle = (article) => {
-  const { title, subTitle, image, ranking, description, externalUrl } = article;
+  const { title, subTitle, image, ranking } = article;
 
   const articleElement = document.createElement('article');
   articleElement.classList.add('article');
@@ -24,16 +38,18 @@ export const renderArticle = (article) => {
   </section>
   <p class="impressions">${ranking}</p>
   <template id="js-article-template">
-    <h2>${title}</h2>
-    <p>${description}</p>
-    <a href="${externalUrl}" class="pop-up-action" target="_blank" rel="noopener"
-      >Read more from source</a
-    >
+
   </div>
   </template>
   `;
 
-  articleElement.addEventListener('click', showFullArticle);
+  articleElement.addEventListener('click', () => {
+    showFullArticle(article);
+  });
 
   mainElement.appendChild(articleElement);
 };
+
+closePopUpButton.addEventListener('click', () => {
+  popUpElement.classList.add('hidden');
+});

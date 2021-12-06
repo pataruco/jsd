@@ -1,23 +1,17 @@
-import { showLoader, hideLoader } from './loader.js';
-import {
-  fetchRickAndMorty,
-  createRickAndMortyArticles,
-} from './rick-and-morty.js';
-import { renderArticle, clearArticles } from './render.js';
+import { renderRickAndMorty } from './rick-and-morty.js';
+import { clearArticles } from './render.js';
 
-const main = async () => {
-  showLoader();
-  try {
-    const characters = await fetchRickAndMorty();
-    hideLoader();
-    const rickAndMortyArticles = createRickAndMortyArticles(characters);
+const feederFormSelectElement = document.querySelector('#feedr-select');
+
+feederFormSelectElement.addEventListener('change', renderFeederOption);
+
+async function renderFeederOption(_event) {
+  const { value } =
+    feederFormSelectElement.options[feederFormSelectElement.selectedIndex];
+
+  if (value === 'rick-and-morty') {
+    await renderRickAndMorty();
+  } else {
     clearArticles();
-    rickAndMortyArticles.forEach((article) => {
-      renderArticle(article);
-    });
-  } catch (error) {
-    // render error
   }
-};
-
-main();
+}

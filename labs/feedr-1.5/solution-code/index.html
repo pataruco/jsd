@@ -23,13 +23,14 @@
     <header>
       <div class="container">
         <h1>Feedr</h1>
-        <nav>
-          <ul>
-            <li><button type="button">Mashable</button></li>
-            <li><button type="button">Reddit</button></li>
-            <li><button type="button">Digg</button></li>
-          </ul>
-        </nav>
+        <form id="feeder-form">
+          <label for="feedr-select">Choose Feed:</label>
+          <select name="feed" id="feedr-select">
+            <option value="">Please choose a feeder</option>
+            <option value="rick-and-morty">Rick and Morty</option>
+          </select>
+        </form>
+
         <form>
           <label for="search" class="hidden">Search</label>
           <input type="search" name="search" id="search" />
@@ -63,9 +64,11 @@
     </main>
 
     <!-- classes: loader hidden pop-up -->
-    <div class="pop-up loader" id="js-pop-up">
-      <button href="#" class="close-popup hidden">close</button>
-      <div class="container">
+    <div class="pop-up loader hidden" id="js-pop-up">
+      <button href="#" class="close-popup" id="js-close-pop-up-button">
+        close
+      </button>
+      <div id="js-pop-up-content" class="container">
         <h2>Article title here</h2>
         <p>Article description/content here.</p>
         <a href="#" class="pop-up-action" target="_blank" rel="noopener"

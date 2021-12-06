@@ -1,3 +1,6 @@
+import { showLoader, hideLoader } from './loader.js';
+import { renderArticle, clearArticles } from './render.js';
+
 export const fetchRickAndMorty = async () => {
   try {
     const response = await fetch('https://rickandmortyapi.com/api/character');
@@ -24,8 +27,23 @@ export const createRickAndMortyArticles = (characters) => {
       image,
       ranking: episode.length,
       description: `Gender: ${gender}, Status: ${status}, Origin: ${origin.name}`,
-      externalUrl: '',
+      externalUrl: '#',
     };
   });
   return articles;
+};
+
+export const renderRickAndMorty = async () => {
+  showLoader();
+  try {
+    const characters = await fetchRickAndMorty();
+    hideLoader();
+    const rickAndMortyArticles = createRickAndMortyArticles(characters);
+    clearArticles();
+    rickAndMortyArticles.forEach((article) => {
+      renderArticle(article);
+    });
+  } catch (error) {
+    // render error
+  }
 };
