@@ -4,7 +4,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase
 import {
   getDatabase,
   ref,
-  onValue,
+  push,
 } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -18,30 +18,15 @@ const firebaseConfig = {
   storageBucket: 'london-jsd-14-test.appspot.com',
   messagingSenderId: '867039899555',
   appId: '1:867039899555:web:b83f1a0ac8093a2761f416',
-  databaseURL: 'https://london-jsd-14-test-default-rtdb.firebaseio.com/',
+  databaseURL:
+    'https://london-jsd-14-test-default-rtdb.europe-west1.firebasedatabase.app/',
+  // measurementId: 'G-QZKRWSG7EK',
 };
 
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-
-// Your web app's Firebase configuration
-// var firebaseConfig = {
-//   apiKey: 'AIzaSyCqBuLm5kOAIOCjfy-woJDf34pvMHRcKfY',
-//   authDomain: 'jsd-12-test.firebaseapp.com',
-//   projectId: 'jsd-12-test',
-//   storageBucket: 'jsd-12-test.appspot.com',
-//   messagingSenderId: '1066246814692',
-//   appId: '1:1066246814692:web:a02f6555d18f7de0bc65f1',
-//   measurementId: 'G-2LNZZ4PQL2',
-//   databaseURL: 'https://jsd-12-test-default-rtdb.firebaseio.com/',
-// };
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// firebase.initializeApp(firebaseConfig);
-
 // https://firebase.google.com/docs/reference/js/firebase.database
-// const db = firebase.database();
 const db = getDatabase(app);
 
 // set up the messages in the database
@@ -60,21 +45,15 @@ const db = getDatabase(app);
       document.querySelector('#message').textContent = '';
 
       // create a section for messages data in your db
-      const messagesReference = ref(db, 'messages');
-
-      onValue(messagesReference, (snapshot) => {
-        console.log({ snapshot });
-      });
-
-      console.log({ messagesReference });
+      const messagesDatabase = ref(db, 'messages');
 
       // use the push method to save data to the messages
       // https://firebase.google.com/docs/reference/js/firebase.database.Reference#push
-      // messagesReference.push({
-      //   message: message,
-      //   votes: 0,
-      // });
-      // console.log(messagesReference);
+      push(messagesDatabase, {
+        message,
+        votes: 0,
+      });
+      console.log(messagesDatabase);
     });
   // getPosts();
 })();
