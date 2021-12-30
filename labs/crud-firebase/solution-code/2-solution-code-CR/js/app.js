@@ -5,8 +5,8 @@ import {
   getDatabase,
   ref,
   push,
+  onValue,
 } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
-// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -20,7 +20,6 @@ const firebaseConfig = {
   appId: '1:867039899555:web:b83f1a0ac8093a2761f416',
   databaseURL:
     'https://london-jsd-14-test-default-rtdb.europe-west1.firebasedatabase.app/',
-  // measurementId: 'G-QZKRWSG7EK',
 };
 
 // Initialize Firebase
@@ -29,86 +28,71 @@ const app = initializeApp(firebaseConfig);
 // https://firebase.google.com/docs/reference/js/firebase.database
 const db = getDatabase(app);
 
-// set up the messages in the database
-(function () {
-  document
-    .querySelector('#message-form')
-    .addEventListener('submit', function (event) {
-      // by default a form submit reloads the DOM which will subsequently reload all our JS
-      // to avoid this we preventDefault()
-      event.preventDefault();
+// create a section for messages data in your db
+const messagesDatabase = ref(db, 'messages');
 
-      // grab user message input
-      const message = document.querySelector('#message').value;
+/**
+ * CREATE the messages in the database
+ */
 
-      // clear message input (for UX purposes)
-      document.querySelector('#message').textContent = '';
+// Element
+const formElement = document.querySelector('#message-form');
+const inputTextElement = document.querySelector('#message');
 
-      // create a section for messages data in your db
-      const messagesDatabase = ref(db, 'messages');
+// Event
+formElement.addEventListener('submit', createMessage);
 
-      // use the push method to save data to the messages
-      // https://firebase.google.com/docs/reference/js/firebase.database.Reference#push
-      push(messagesDatabase, {
-        message,
-        votes: 0,
-      });
-      console.log(messagesDatabase);
-    });
-  // getPosts();
-})();
+// Execution
+function createMessage(event) {
+  // by default a form submit reloads the DOM which will subsequently reload all our JS
+  // to avoid this we preventDefault()
+  event.preventDefault();
 
-// function getPosts() {
-//   // retrieve messages data when .on() initially executes
-//   // and when its data updates
-//   // https://firebase.google.com/docs/reference/js/firebase.database.Reference
-//   // https://firebase.google.com/docs/database/web/read-and-write#listen_for_value_events
-//   // on listeners responds to clients every time the database changes
-//   ref(db, 'messages').on('value', function (results) {
-//     const messageBoard = document.querySelector('.message-board');
-//     let messages = [];
+  // grab user message input
+  const { value: message } = inputTextElement;
 
-//     const allMsgs = results.val();
-//     // iterate through results coming from database call; messages
-//     for (let msg in allMsgs) {
-//       const message = allMsgs[msg].message;
-//       const votes = allMsgs[msg].votes;
+  // clear message input (for UX purposes)
+  inputTextElement.textContent = '';
 
-//       // create message element
-//       const messageListElement = document.createElement('li');
-//       messageListElement.setAttribute('data-id', msg);
-//       messageListElement.textContent = message;
-//       // $messageListElement.attr('data-id', msg)
-//       // .text(message)
+  // use the push method to save data to the messages
+  // https://firebase.google.com/docs/reference/js/firebase.database.Reference#push
+  push(messagesDatabase, {
+    message,
+    votes: 0,
+  });
+}
 
-//       // create delete element
-//       // DELETE: https://fontawesome.com/v4.7.0/icon/trash
-//       const deleteElement = document.createElement('i');
-//       deleteElement.className = 'fa fa-trash pull-right delete';
+/**
+ * READ messages in the database
+ */
 
-//       // create up vote element
-//       // UP VOTE: https://fontawesome.com/v4.7.0/icon/thumbs-up
-//       const upvoteElement = document.createElement('i');
-//       upvoteElement.className = 'fa fa-thumbs-up pull-right';
+// Elements
 
-//       // create down vote element
-//       // DOWN VOTE: https://fontawesome.com/v4.7.0/icon/thumbs-down
-//       const downvoteElement = document.createElement('i');
-//       downvoteElement.className = 'fa fa-thumbs-down pull-right';
+const messageBoard = document.querySelector('.message-board');
 
-//       messageListElement.appendChild(deleteElement);
-//       messageListElement.appendChild(upvoteElement);
-//       messageListElement.appendChild(downvoteElement);
-//       // messageBoard.appendChild(messageListElement);
-//       messages.push(messageListElement);
-//     }
+// Event
 
-//     // remove lis to avoid dupes
-//     // .empty() is a jQuery method to remove all child nodes
-//     // http://api.jquery.com/empty/
-//     messageBoard.innerHTML = '';
-//     messages.forEach((element) => {
-//       messageBoard.append(element);
-//     });
-//   });
-// }
+window.addEventListener('DOMContentLoaded', getMessages);
+
+function getMessages(_event) {
+  onValue(messagesDatabase, (snapShot) => {
+    const messages = snapShot.val();
+    renderMessages(messages);
+  });
+}
+
+function renderMessages(messages) {
+  messageBoard.innerHTML = '';
+
+  Object.entries(messages).forEach(([key, messageItem]) => {
+    const { message, votes } = messageItem;
+    const li = `<li data-id="${key}">
+          ${message}
+          ${votes}
+          <i class="fa fa-trash pull-right delete"></i>
+          <i class="fa fa-thumbs-down pull-right"></i>
+          <i class="fa fa-thumbs-up pull-right"></i> 
+        </li>`;
+    messageBoard.innerHTML = messageBoard.innerHTML + li;
+  });
+}
