@@ -1,5 +1,3 @@
-'use strict';
-
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
 import {
   getDatabase,
@@ -69,6 +67,7 @@ function createMessage(event) {
 // Elements
 
 const messageBoard = document.querySelector('.message-board');
+const templateElement = document.querySelector('template');
 
 // Event
 
@@ -86,13 +85,39 @@ function renderMessages(messages) {
 
   Object.entries(messages).forEach(([key, messageItem]) => {
     const { message, votes } = messageItem;
-    const li = `<li data-id="${key}">
-          ${message}
-          ${votes}
-          <i class="fa fa-trash pull-right delete"></i>
-          <i class="fa fa-thumbs-down pull-right"></i>
-          <i class="fa fa-thumbs-up pull-right"></i> 
-        </li>`;
-    messageBoard.innerHTML = messageBoard.innerHTML + li;
+    renderMessage({ key, message, votes });
   });
+}
+
+function renderMessage({ key, message, votes }) {
+  const clone = templateElement.content.cloneNode(true);
+
+  const liElement = clone.querySelector('li');
+  const messageElement = clone.querySelector('p:first-of-type');
+  const votesElement = clone.querySelector('#votes');
+  const voteUpElement = clone.querySelector('#vote-up');
+  const voteDownElement = clone.querySelector('#vote-down');
+  const deleteElement = clone.querySelector('#delete');
+
+  liElement.setAttribute('data-id', key);
+  messageElement.innerText = message;
+  votesElement.innerText = votes;
+
+  voteUpElement.addEventListener('click', voteUpMessage);
+  voteDownElement.addEventListener('click', voteDownMessage);
+  deleteElement.addEventListener('click', deleteMessage);
+
+  messageBoard.appendChild(clone);
+}
+
+function voteUpMessage(event) {
+  console.log('vote up');
+}
+
+function voteDownMessage(event) {
+  console.log('vote down');
+}
+
+function deleteMessage(event) {
+  console.log('delete');
 }
