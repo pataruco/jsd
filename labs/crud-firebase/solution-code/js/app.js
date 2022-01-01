@@ -4,6 +4,7 @@ import {
   ref,
   push,
   onValue,
+  update,
 } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -53,7 +54,7 @@ function createMessage(event) {
   inputTextElement.textContent = '';
 
   // use the push method to save data to the messages
-  // https://firebase.google.com/docs/reference/js/firebase.database.Reference#push
+  // https://firebase.google.com/docs/reference/js/database#push
   push(messagesDatabase, {
     message,
     votes: 0,
@@ -74,6 +75,7 @@ const templateElement = document.querySelector('template');
 window.addEventListener('DOMContentLoaded', getMessages);
 
 function getMessages(_event) {
+  //  https:firebase.google.com/docs/reference/js/database#onvalue
   onValue(messagesDatabase, (snapShot) => {
     const messages = snapShot.val();
     renderMessages(messages);
@@ -83,25 +85,29 @@ function getMessages(_event) {
 function renderMessages(messages) {
   messageBoard.innerHTML = '';
 
-  Object.entries(messages).forEach(([key, messageItem]) => {
-    const { message, votes } = messageItem;
-    renderMessage({ key, message, votes });
-  });
+  if (messages) {
+    Object.entries(messages).forEach(([key, messageItem]) => {
+      const { message, votes } = messageItem;
+      renderMessage({ key, message, votes });
+    });
+  }
 }
 
 function renderMessage({ key, message, votes }) {
   const clone = templateElement.content.cloneNode(true);
 
-  const liElement = clone.querySelector('li');
   const messageElement = clone.querySelector('p:first-of-type');
   const votesElement = clone.querySelector('#votes');
   const voteUpElement = clone.querySelector('#vote-up');
   const voteDownElement = clone.querySelector('#vote-down');
   const deleteElement = clone.querySelector('#delete');
 
-  liElement.setAttribute('data-id', key);
   messageElement.innerText = message;
   votesElement.innerText = votes;
+
+  voteUpElement.setAttribute('data-id', key);
+  voteDownElement.setAttribute('data-id', key);
+  deleteElement.setAttribute('data-id', key);
 
   voteUpElement.addEventListener('click', voteUpMessage);
   voteDownElement.addEventListener('click', voteDownMessage);
@@ -110,14 +116,69 @@ function renderMessage({ key, message, votes }) {
   messageBoard.appendChild(clone);
 }
 
-function voteUpMessage(event) {
-  console.log('vote up');
+function getMessageId(event) {
+  const {
+    currentTarget: {
+      dataset: { id },
+    },
+  } = event;
+
+  return id;
 }
 
-function voteDownMessage(event) {
-  console.log('vote down');
+function getMessageById(id) {
+  let messages;
+  onValue(messagesDatabase, (snapShot) => {
+    messages = snapShot.val();
+  });
+  return messages[id];
 }
 
-function deleteMessage(event) {
-  console.log('delete');
+/**
+ * Update messages in the database
+ */
+
+async function voteUpMessage(event) {
+  const messageId = getMessageId(event);
+  const message = getMessageById(messageId);
+
+  const updates = {};
+
+  updates[messageId] = {
+    ...message,
+    votes: message.votes + 1,
+  };
+
+  // https://firebase.google.com/docs/database/web/read-and-write#update_specific_fields
+  await update(messagesDatabase, updates);
+}
+
+async function voteDownMessage(event) {
+  const messageId = getMessageId(event);
+  const message = getMessageById(messageId);
+
+  const updates = {};
+
+  updates[messageId] = {
+    ...message,
+    votes: message.votes - 1,
+  };
+
+  // https://firebase.google.com/docs/database/web/read-and-write#update_specific_fields
+  await update(messagesDatabase, updates);
+}
+
+/**
+ * Delete messages in the database
+ */
+
+async function deleteMessage(event) {
+  const messageId = getMessageId(event);
+
+  const updates = {};
+
+  updates[messageId] = null;
+
+  // https://firebase.google.com/docs/database/web/read-and-write#delete_data
+  await update(messagesDatabase, updates);
 }
