@@ -13,6 +13,7 @@ const Weeks = [
   'The DOM',
   'Asynchronous programming & TfL API Lab 🚇 🧪',
   'Template and Feedr Lab 🧪',
+  'Intro to Firebase and CRUD',
   // 'APIs Lab & Prototypal Inheritance',
   // 'Closures, this & Intro to CRUD and Firebase Lab',
   // 'Deploying Your App & Student Choice',
