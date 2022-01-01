@@ -123,6 +123,15 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-7/lesson-13',
+    element: () => (
+      <>
+        <Title week={7} lesson={13} />
+        <SlidesDeck slidesDeckName="13-intro-to-firebase-and-crud" />
+      </>
+    ),
+  },
 ];
 
 // Weeks

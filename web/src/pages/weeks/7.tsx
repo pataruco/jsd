@@ -44,10 +44,8 @@ import Week from '../../components/week';
 // ];
 
 const weekConfig = {
-  // bonuses,
   firstLessonTitle: 'Intro to Firebase & CRUD',
-  // resources,
-  secondLessonTitle: '',
+  secondLessonTitle: 'Firebase lab 🧪',
   weekNumber: 7,
 };
 
