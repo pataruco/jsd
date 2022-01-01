@@ -207,9 +207,9 @@ const Header: React.FC = () => {
             </button>
             <BonusLessons />
           </li>
-          {/* <li>
+          <li>
             <Link to="/final-project-brief">Final project</Link>
-          </li> */}
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>
