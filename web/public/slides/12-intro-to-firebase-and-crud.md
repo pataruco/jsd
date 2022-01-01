@@ -3,7 +3,7 @@ class: frontpage
 <div>
   <h2>JavaScript Development</h2>
   <hr/>
-  <h1>12 Intro to Firebase <wbr> & CRUD</h1>
+  <h1>12 Intro to Firebase <wbr>& CRUD</h1>
 </div>
 
 ---
@@ -20,7 +20,7 @@ class: frontpage
 ## What is CRUD
 
 - Databases are used to persist data
-- In computer programming, **create**, **read**, **update**, and **delete** (CRUD) are the four basic functions of persistent storage
+- In computer programming, **create**, **read**, **update**, and **delete** (CRUD) are the four basic functions of persistent storage
 
 ---
 
@@ -59,12 +59,12 @@ and much more
 
 # Firebase realtime
 
-| CRUD   | HTTP      | Firebase method |
-| ------ | --------- | --------------- |
-| Create | POST      | `push()`        |
-| Read   | GET       | `ref()`         |
-| Update | PUT/PATCH | `set()`         |
-| Delete | DELETE    | `remove()`      |
+| CRUD   | HTTP      | Firebase method         |
+| ------ | --------- | ----------------------- |
+| Create | POST      | `push()`                |
+| Read   | GET       | `ref()` / `onValue()`   |
+| Update | PUT/PATCH | `set()` / `update()`    |
+| Delete | DELETE    | `remove()` / `update()` |
 
 ---
 
@@ -73,10 +73,9 @@ and much more
 1. Go to your Google Firebase console.
 2. Create a new project.
 3. Create a new web app.
-4. After your app is registered copy the SDK script and configuration and add them to your html file.
-5. Add script tags for each service.
-6. Enable **Anonymous login**.
-7. Go to the Database section and create a new Realtime Database. Make sure to start in **test mode**.
+4. After your app is registered copy the SDK script and configuration and add them to your JavaScript file.
+5. Enable **Anonymous login**.
+6. Go to the Database section and create a new Realtime Database. Make sure to start in **test mode**.
 
 ---
 
@@ -122,7 +121,7 @@ and much more
 
 ## Steps to create a new Firebase application
 
-**4.** After your app is registered copy the SDK script and configuration and add them to your html file.
+**4.** After your app is registered copy the SDK script and configuration and add them to your JavaScript file.
 
 <picture style="max-width: 90%; margin: 0 auto; display: block;">
   <img src="https://pataruco.s3.amazonaws.com/ga/jsd/4.png" alt="After your app is registered copy the SDK script and configuration and add them to your html file">
@@ -132,17 +131,7 @@ and much more
 
 ## Steps to create a new Firebase application
 
-**5.** Add script tags for each service.
-
-<picture style="max-width: 90%; margin: 0 auto; display: block;">
-  <img src="https://pataruco.s3.amazonaws.com/ga/jsd/5.png" alt="Add script tags for each service">
-<picture>
-
----
-
-## Steps to create a new Firebase application
-
-**6.** Enable **Anonymous login**.
+**5.** Enable **Anonymous login**.
 
 <picture style="max-width: 90%; margin: 0 auto; display: block;">
   <img src="https://pataruco.s3.amazonaws.com/ga/jsd/6.png" alt="Enable Anonymous login">
@@ -152,7 +141,7 @@ and much more
 
 ## Steps to create a new Firebase application
 
-**7.** Go to the Database section and create a new Realtime Database. Make sure to start in **test mode**..
+**6.** Go to the Database section and create a new Realtime Database. Make sure to start in **test mode**..
 
 <picture style="max-width: 90%; margin: 0 auto; display: block;">
   <img src="https://pataruco.s3.amazonaws.com/ga/jsd/7.png" alt="Go to the Database section and create a new Realtime Database. Make sure to start in test mode">
@@ -170,21 +159,11 @@ and much more
 
 ---
 
-## Build a CRUD application
+class: lab
 
-Add before closing body tags
+# Code along
 
-```html
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.13.12/firebase-app.js"></script>
-
-<!-- SDKs for Firebase products -->
-<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
-
-<!-- Your script file here -->
-<script src="./scripts/index.js"></script>
-```
+Download [starter code](https://github.com/pataruco/jsd/raw/master/labs/crud-firebase/crud-firebase-starter-code.zip)
 
 ---
 
