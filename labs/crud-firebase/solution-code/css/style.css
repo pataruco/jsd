@@ -8,7 +8,7 @@ html {
 }
 
 main {
-  width: 75vw;
+  width: 66vw;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -24,6 +24,21 @@ form textarea {
   max-width: 80ch;
   height: 5rem;
   padding: 0.5rem;
+  border: 2px solid black;
+}
+
+form button[type='submit'] {
+  border: 2px solid white;
+  padding: 0.5rem;
+  color: white;
+  background-color: black;
+}
+
+form button[type='submit']:active {
+  border: 2px solid black;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
 }
 
 ul {
@@ -38,10 +53,34 @@ li {
   max-width: 80ch;
   justify-content: space-between;
   margin-bottom: 1rem;
+  border: 2px solid;
+  padding: 1.25rem;
+}
+
+li > * {
+  max-width: calc(50% - 1.25rem);
+}
+
+li p:first {
+  margin-right: 1rem;
+  word-wrap: break-word;
 }
 
 li div {
   display: flex;
+  align-items: center;
+}
+
+li div button[type='button'] {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+li div button[type='button']:active,
+li div button[type='button']:focus {
+  text-shadow: 1px 1px 1px black;
 }
 
 li div > *:not(button:last-of-type) {
