@@ -82,7 +82,10 @@ class: code-along
 
 # Code along
 
-Download
+<a 
+  href="https://github.com/pataruco/jsd/raw/master/labs/prototypal-inheritance/prototypal-inheritance-starter-code.zip" class="download-link">
+Download labs
+</a>
 
 ???
 
