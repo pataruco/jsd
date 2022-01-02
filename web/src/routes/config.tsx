@@ -132,11 +132,29 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-8/lesson-14',
+    element: () => (
+      <>
+        <Title week={8} lesson={14} />
+        <SlidesDeck slidesDeckName="14-prototypal-inheritance" />
+      </>
+    ),
+  },
+  {
+    path: '/week-8/lesson-15',
+    element: () => (
+      <>
+        <Title week={8} lesson={15} />
+        <SlidesDeck slidesDeckName="15-closures-this" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(7) // Set number of weeks
+export const weeks = new Array(8) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 
