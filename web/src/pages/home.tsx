@@ -16,7 +16,7 @@ const Weeks = [
   'Intro to Firebase and CRUD',
   'Prototypal inheritance & closures & this',
   'Deploying your app & student choice',
-  // 'Final Project Lab & Final Project Presentations ',
+  'Final project lab 🧪 & Final project Presentations 🎉',
 ];
 
 const StyledMain = styled.main`
