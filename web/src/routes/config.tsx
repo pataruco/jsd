@@ -150,11 +150,47 @@ export const lessonRoutes = [
       </>
     ),
   },
+  {
+    path: '/week-9/lesson-16',
+    element: () => (
+      <>
+        <Title week={9} lesson={16} />
+        <SlidesDeck slidesDeckName="16-deploying-your-app" />
+      </>
+    ),
+  },
+  {
+    path: '/week-9/lesson-17',
+    element: () => (
+      <>
+        <Title week={9} lesson={17} />
+        <SlidesDeck slidesDeckName="17-student-choice" />
+      </>
+    ),
+  },
+  {
+    path: '/week-10/lesson-18',
+    element: () => (
+      <>
+        <Title week={10} lesson={18} />
+        <SlidesDeck slidesDeckName="18-final-project-lab" />
+      </>
+    ),
+  },
+  {
+    path: '/week-10/lesson-19',
+    element: () => (
+      <>
+        <Title week={10} lesson={19} />
+        <SlidesDeck slidesDeckName="19-final-project-presentations" />
+      </>
+    ),
+  },
 ];
 
 // Weeks
 // Path: week-n
-export const weeks = new Array(8) // Set number of weeks
+export const weeks = new Array(10) // Set number of weeks
   .fill(1)
   .map((item, i) => item + i);
 

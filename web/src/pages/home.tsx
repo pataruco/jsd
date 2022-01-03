@@ -7,16 +7,16 @@ import Title from '../components/title';
 import Page from '../components/page';
 
 const Weeks = [
-  'Installfest, The Command Line & Data Types',
-  'Arrays, Loops, Conditionals & Functions',
+  'Installfest, the command Line & data Types',
+  'Arrays, loops, conditionals & functions',
   'Objects & JSON, Slack bot lab 🤖 🧪',
   'The DOM',
-  'Asynchronous programming & TfL API Lab 🚇 🧪',
-  'Template and Feedr Lab 🧪',
+  'Asynchronous programming & TfL API lab 🚇 🧪',
+  'Template and Feedr lab 🧪',
   'Intro to Firebase and CRUD',
-  'Prototypal Inheritance & Closures & this',
-  // 'Deploying Your App & Student Choice',
-  // 'Final Project Lab & Final Project Presentations ',
+  'Prototypal inheritance & closures & this',
+  'Deploying your app & student choice',
+  'Final project lab 🧪 & Final project Presentations 🎉',
 ];
 
 const StyledMain = styled.main`
