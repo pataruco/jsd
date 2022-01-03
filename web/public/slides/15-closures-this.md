@@ -104,9 +104,8 @@ class: code-along
 # Code along
 
 <a 
-  href=""
-  class="download-link">
-Download labs
+  href="https://github.com/pataruco/jsd/raw/master/labs/closures-this/closures-this-solution-code.zip"
+  class="download-link">Download labs
 </a>
 
 ---
