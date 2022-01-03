@@ -21,6 +21,7 @@ const StyledMain = styled.main`
     background-color: rgba(27, 31, 35, 0.05);
     border-radius: 6px;
   }
+
   table {
     margin-top: 1.25rem;
   }
@@ -68,7 +69,7 @@ const FinalProjectBrief: React.FC = () => (
             <li>Make HTTP requests to your own Firebase URL</li>
             <li>Make at least one HTTP request to a third-party server</li>
             <li>CRUD functionality should be present</li>
-            <li>Use either vanilla JS or jQuery to perform DOM manipulation</li>
+            <li>Use vanilla JS to perform DOM manipulation</li>
             <li>Listen for events and add interactivity based on user input</li>
           </ul>
           <h3>Hosting</h3>
@@ -103,21 +104,6 @@ const FinalProjectBrief: React.FC = () => (
             <li>
               Research different APIs (i.e. twitter) and see what kind of
               information you can use from them.
-            </li>
-          </ul>
-          <h3>Potential Project Ideas</h3>
-          <ul>
-            <li>
-              Movie forum site where users can post their favorite movies and
-              rate them.
-            </li>
-            <li>
-              Celebrity follower app that allows users to easily pull all social
-              media data from their favorite celebrities.
-            </li>
-            <li>
-              Friend locator site that allows users to see how far away they are
-              from their friends.
             </li>
           </ul>
         </section>
