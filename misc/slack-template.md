@@ -1,5 +1,7 @@
 # Slack template
 
+## Lesson
+
 ```md
 ==============================================
 :ga: Welcome to the GA London JSD 14 Live Online | Thursday 15th November 6-9PM GMT
@@ -15,4 +17,13 @@ Agenda:
 - Identify common issues that might arise and solutions that will be used during the course.
 
 ==============================================
+```
+
+## Q&A
+
+```md
+===============================================
+:parking: :car:  Parking Lot :parking: :car:
+If you have questions that you want to ask in advance, please post it here
+===============================================
 ```
