@@ -7,8 +7,6 @@
 // 5. Parse API response and add locations to map.
 // 6. Create an information window for when a user selects a bike point
 
-// 1. Get user’s location.
-
 const mapElement = document.querySelector('#map');
 
 let map;
