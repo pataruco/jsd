@@ -135,6 +135,7 @@ export const bonusLessons = [
   ['Installfest macOS', '/bonus-lessons/installfest-macos'],
   ['Installfest Windows', '/bonus-lessons/installfest-windows'],
   ['jQuery', '/bonus-lessons/jquery'],
+  ['React', '/bonus-lessons/react'],
 ];
 
 const BonusLessons: React.FC = () => {
