@@ -2,6 +2,14 @@
 
 # Unit #2 Project: Feedr
 
+## Please note
+
+Many browsers do not allow you to access files on the local filesystem with JavaScript (even if the HTML document is also on the local filesystem).
+
+This extends to loading JavaScript modules.
+
+Install a webserver and use that (with a URL like **http://localhost/**) for testing.
+
 ## Overview
 
 The web is an ever growing medium and it is getting more and more difficult to filter useful
