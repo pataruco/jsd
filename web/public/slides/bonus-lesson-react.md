@@ -260,6 +260,61 @@ ReactDOM.render(<Counter />, domContainer);
 ## React components
 
 .row[
+.col[
+
+### DOM API
+
+```txt
+        ┌─────────┐
+        │Business │
+        │  logic  │
+        └─────────┘
+             ▲           UI
+             │          API
+    ┌────────┴──────┐
+─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─
+    │               │
+    ▼               │
+┌──────┐        ┌──────┐
+│state │        │events│
+└──────┘        └──────┘
+```
+
+]
+.col[
+
+### React
+
+```txt
+
+        ┌─────────┐
+        │Business │
+        │  logic  │
+        └─────────┘
+             ▲
+             ▼
+        ┌─────────┐
+        │  React  │
+        └─────────┘
+             ▲
+             │           UI
+    ┌────────┴──────┐   API
+─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─
+    │               │
+    ▼               │
+┌──────┐        ┌──────┐
+│state │        │events│
+└──────┘        └──────┘
+```
+
+]
+]
+
+---
+
+## React components
+
+.row[
 .column[
 
 ```jsx
