@@ -18,6 +18,14 @@ class: frontpage
 
 ---
 
+class: code-along
+
+# Example
+
+[Download examples](https://github.com/pataruco/jsd/raw/master/labs/react/react-solution-code.zip)
+
+---
+
 ## Create React App (CRA)
 
 - An <a href="https://www.npmjs.com/package/create-react-app" class="external-link">NPM package</a> that installs all necessary packages to create a React application
