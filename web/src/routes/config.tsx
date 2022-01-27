@@ -200,7 +200,7 @@ export const weekRoutes = weeks.map((weekNumber) => ({
     const Content = lazy(() => import(`../pages/weeks/${weekNumber}`));
     return (
       <>
-        <Title week={1} />
+        <Title week={weekNumber} />
         <Suspense fallback={<Loading />}>
           <Content />
         </Suspense>
